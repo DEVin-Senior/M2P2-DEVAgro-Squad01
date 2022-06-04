@@ -53,7 +53,7 @@ Botão de log in
 
 [ ] - Ao clicar no botão ‘incluir novo grão’ o usuário deverá ser direcionado para a tela de cadastro de grãos, conforme mostrado no protótipo do projeto. (Cadastro grãos);
 
-## Exemplo a ser seguido ou ser semelhante:
+### Exemplo a ser seguido ou ser semelhante:
 
 https://www.figma.com/file/e1bWIIr30OjndaBWNiir4Y/Dev-agro?node-id=0%3A1.
 
