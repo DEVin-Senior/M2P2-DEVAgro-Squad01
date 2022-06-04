@@ -9,7 +9,7 @@
 [![FEITO](https://img.shields.io/badge/FEITO-2ea44f?style=for-the-badge)](https://)
 [![A FAZER](https://img.shields.io/badge/A_FAZER-f60032?style=for-the-badge)](https://)
 
-[![A FAZER](https://img.shields.io/badge/A_FAZER-f60032?style=for-the-badge)](https://) - A aplicação possuirá um repositório no GitHub onde todas as squads irão atuar.
+[![FEITO](https://img.shields.io/badge/FEITO-2ea44f?style=for-the-badge)](https://) - A aplicação possuirá um repositório no GitHub onde todas as squads irão atuar.
 
 [![A FAZER](https://img.shields.io/badge/A_FAZER-f60032?style=for-the-badge)](https://) - A aplicação deverá ser desenvolvida utilizando Angular CLI.;
 
