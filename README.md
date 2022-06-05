@@ -10,7 +10,6 @@
 ## Executando a aplicação:
 
 ```bash
-
 ```
 
 ## Requisitos Funcionais:
