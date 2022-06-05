@@ -23,7 +23,7 @@
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="/squad.jpg" /></a></p>
 
 ## Licença:
-- [MIT](https://github.com/all-an/DEV-Agro/blob/main/LICENSE)
+- [MIT](https://github.com/)
 
 ## Exemplo a ser seguido ou ser semelhante:
 
