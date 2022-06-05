@@ -1,9 +1,33 @@
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-<p align="center"><a href="#"><img align="center" width="218" height="375"  src="/squad.jpg" /></a></p>
-
 ## Projeto 2 Módulo 2 - DevinHouse
 
+## Tecnologias utilizadas:
+
+- Angular 13
+- NodeJS
+
+## Executando a aplicação:
+
+```bash
+
+```
+
+## Requisitos Funcionais:
+- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/requisitos.md)
+
+
+## Autores:
+- [Nome da pessoa ](https://www.linkedin.com)
+
+<p align="center"><a href="#"><img align="center" width="218" height="375"  src="/squad.jpg" /></a></p>
+
+## Licença:
+- [MIT](https://github.com/all-an/DEV-Agro/blob/main/LICENSE)
+
+
+### Exemplo a ser seguido ou ser semelhante:
+=======
 ### Requisitos do Projeto:
 
 [![FEITO](https://img.shields.io/badge/FEITO-2ea44f?style=for-the-badge)](https://)
