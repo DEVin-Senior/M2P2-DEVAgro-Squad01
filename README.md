@@ -14,7 +14,7 @@
 ```
 
 ## Requisitos Funcionais:
-- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/requisitos.md)
+- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
 
 
 ## Autores:
