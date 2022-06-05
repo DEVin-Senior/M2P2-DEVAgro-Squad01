@@ -24,7 +24,7 @@ Endereço da sede;
 E-mail;
 Senha;
 Conformação da senha;
-Botão de log in 
+Botão de log in. 
 
 [![A FAZER](https://img.shields.io/badge/A_FAZER-f60032?style=for-the-badge)](https://) - Quando a empresa acessar a aplicação, deverá ser direcionada para a tela Início.
 
