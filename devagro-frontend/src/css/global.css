@@ -11,10 +11,10 @@
 
 body {
   height: 100vh;
-  background: var(--main-green-color);
 }
 
 .login-page {
+  background: var(--main-green-color);
   height: 100vh;
   display: flex;
   justify-content: center;
