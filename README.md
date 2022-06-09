@@ -18,7 +18,7 @@
 
 
 ## Autores:
-- [Nome da pessoa ](https://www.linkedin.com)
+- [ ](https://www.linkedin.com)
 
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="/squad.jpg" /></a></p>
 
