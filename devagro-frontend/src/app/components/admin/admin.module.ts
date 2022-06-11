@@ -11,8 +11,9 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { TemplateBodyComponent } from '../template-body/template-body.component';
-import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
+
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 
 @NgModule({
   declarations: [
