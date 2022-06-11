@@ -11,6 +11,8 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { TemplateBodyComponent } from '../template-body/template-body.component';
+import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
+import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,11 @@ import { TemplateBodyComponent } from '../template-body/template-body.component'
     FazendasComponent,
     GraosComponent,
     SidenavComponent,
-    TemplateBodyComponent
+    TemplateBodyComponent,
+    FuncionariosComponent,
+    FuncionarioCadastroComponent,
+    FuncionarioAlteraCadastroComponent
+    
   ],
   imports: [
     CommonModule,
