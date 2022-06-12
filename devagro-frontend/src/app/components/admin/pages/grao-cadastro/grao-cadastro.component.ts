@@ -30,8 +30,8 @@ grao_info:any = {
   id: 0,
   nome: "",
   fazenda: "",
-  CPF: "",
-  telefone: "",
+  colheita: "",
+  informacoes: "",
 }
 
 mudar_nome(nome:string):void{
@@ -42,12 +42,12 @@ mudar_fazenda(fazenda:string):void{
   this.grao_info.fazenda = fazenda
 }
 
-mudar_CPF(CPF:string):void{
-  this.grao_info.CPF = CPF
+mudar_colheita(colheita:string):void{
+  this.grao_info.colheita = colheita
 }
 
-mudar_telefone(telefone:string):void{
-  this.grao_info.telefone = telefone
+mudar_informacoes(informacoes:string):void{
+  this.grao_info.informacoes = informacoes
 }
 
 //Função cadastrar 
