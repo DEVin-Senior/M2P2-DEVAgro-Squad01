@@ -11,6 +11,7 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { TemplateBodyComponent } from '../template-body/template-body.component';
+import { GraoCadastroComponent } from './pages/grao-cadastro/grao-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TemplateBodyComponent } from '../template-body/template-body.component'
     FazendasComponent,
     GraosComponent,
     SidenavComponent,
-    TemplateBodyComponent
+    TemplateBodyComponent,
+    GraoCadastroComponent
   ],
   imports: [
     CommonModule,

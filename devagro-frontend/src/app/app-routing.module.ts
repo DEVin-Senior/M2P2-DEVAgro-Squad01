@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FazendasComponent } from './components/admin/pages/fazendas/fazendas.component';
 import { FuncionariosComponent } from './components/admin/pages/funcionarios/funcionarios.component';
 import { GraosComponent } from './components/admin/pages/graos/graos.component';
+import { GraoCadastroComponent } from './components/admin/pages/grao-cadastro/grao-cadastro.component';
+
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: "admin/graos",
     component: GraosComponent
+  },
+  {
+    path: "admin/grao-cadastro",
+    component: GraoCadastroComponent
   }
 ];
 
