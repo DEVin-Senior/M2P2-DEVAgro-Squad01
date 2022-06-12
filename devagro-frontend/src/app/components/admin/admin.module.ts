@@ -18,6 +18,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/fazenda-cadastro.component';
+import { GraosCadastroComponent } from './pages/graos/graos-cadastro/graos-cadastro.component';
+import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
+import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { LayoutModule } from '@angular/cdk/layout';
     GraosComponent,
     SidenavComponent,
     TemplateBodyComponent,
-    DashboardComponent
+    DashboardComponent,
+    FazendaCadastroComponent,
+    GraosCadastroComponent,
+    FuncionarioCadastroComponent,
+    FuncionarioAlteraCadastroComponent
   ],
   imports: [
     CommonModule,
