@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit,Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 
 
@@ -9,7 +9,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class FuncionarioCadastroComponent implements OnInit {
 
-  mudouValor = new EventEmitter();
+  
   lista:Array<Object>=[]
 
 
@@ -90,8 +90,9 @@ export class FuncionarioCadastroComponent implements OnInit {
     localStorage.setItem("quantidade_funcionarios",String(id + 1))
     ///EVENT EMITTER
     console.log(funcionario_info_json)
+    console.log(this.funcionario_info)
 
-    this.mudouValor.emit(this.listaFuncionariosArmazenamento)
+    
 
 
   }
