@@ -14,6 +14,8 @@ import { TemplateBodyComponent } from '../template-body/template-body.component'
 
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
+import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/fazenda-cadastro.component';
+import { GraosCadastroComponent } from './pages/graos/graos-cadastro/graos-cadastro.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-c
     TemplateBodyComponent,
     FuncionariosComponent,
     FuncionarioCadastroComponent,
-    FuncionarioAlteraCadastroComponent
+    FuncionarioAlteraCadastroComponent,
+    FazendaCadastroComponent,
+    GraosCadastroComponent
     
   ],
   imports: [

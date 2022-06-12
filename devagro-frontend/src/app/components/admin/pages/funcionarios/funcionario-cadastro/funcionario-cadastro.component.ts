@@ -19,7 +19,7 @@ export class FuncionarioCadastroComponent implements OnInit {
   ngOnInit(): void {
     ///preenche a lista  com os objetos armazenado no localStorage sempre que a tela inicia
     
-    this.listaFuncionariosArmazenamento = JSON.parse(String(localStorage.getItem("listaFuncionarios")))
+    this.listaFuncionariosArmazenamento = JSON.parse(String(localStorage.getItem("listaFuncionarios"))) || []
     localStorage.setItem("listaFuncionarios",JSON.stringify(this.listaFuncionariosArmazenamento))//Array( JSON.parse(String(localStorage.getItem("listaFuncionarios"))))
     console.log(this.listaFuncionariosArmazenamento)
 
@@ -90,6 +90,8 @@ export class FuncionarioCadastroComponent implements OnInit {
     localStorage.setItem("quantidade_funcionarios",String(id + 1))
     ///EVENT EMITTER
     console.log(funcionario_info_json)
+
+    this.mudouValor.emit(this.listaFuncionariosArmazenamento)
 
 
   }
