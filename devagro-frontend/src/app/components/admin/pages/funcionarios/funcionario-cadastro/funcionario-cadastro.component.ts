@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-funcionario-cadastro',
@@ -7,14 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionarioCadastroComponent implements OnInit {
 
+  mudouValor = new EventEmitter();
+  lista:Array<Object>=[]
+
+
+
   constructor() { }
 
   ngOnInit(): void {
+    ///preenche a lista  com os objetos armazenado no localStorage sempre que a tela inicia
+    
+    this.listaFuncionariosArmazenamento = JSON.parse(String(localStorage.getItem("listaFuncionarios")))
+    localStorage.setItem("listaFuncionarios",JSON.stringify(this.listaFuncionariosArmazenamento))//Array( JSON.parse(String(localStorage.getItem("listaFuncionarios"))))
+    console.log(this.listaFuncionariosArmazenamento)
+
   }
 
 
   onstructor() { }
+    valor:any
 
+  listaFuncionariosArmazenamento :Array<Object>=[] //|| JSON.parse(String(localStorage.getItem("listaFuncionarios")))
+
+
+ 
   funcionario_info:any = {
     id: 0,
     nome: "",
@@ -58,18 +76,30 @@ export class FuncionarioCadastroComponent implements OnInit {
     else{
       this.funcionario_info.id = id
     }
-
+    //STRINGFA O OBJ FUNCIONARIO
     let funcionario_info_json: string = JSON.stringify(this.funcionario_info)
+    //ADD O OBJETO A LISTA
+    this.listaFuncionariosArmazenamento.push(funcionario_info_json);
+    //REFERENCIA O LOCAL STORAGE A LISTA
+    localStorage.setItem("listaFuncionarios",JSON.stringify(this.listaFuncionariosArmazenamento))
+    console.log(this.listaFuncionariosArmazenamento)
+
+    ///CRIA FUNCIONARIO E LOCALSTORAGE REFERENTE
     localStorage.setItem("funcionario_" + String(id),funcionario_info_json)
 
     localStorage.setItem("quantidade_funcionarios",String(id + 1))
-    
+    ///EVENT EMITTER
     console.log(funcionario_info_json)
+
+
   }
 
   pegar_funcionario(id:Number):any{
     return JSON.parse(String(localStorage.getItem("funcionario_" + String(id))))
   }
+
+
+  
 
   
 

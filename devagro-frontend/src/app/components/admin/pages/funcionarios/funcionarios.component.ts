@@ -10,6 +10,8 @@ export class FuncionariosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }
