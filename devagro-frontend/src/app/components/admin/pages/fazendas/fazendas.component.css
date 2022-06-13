@@ -1,1 +1,24 @@
 
+table {
+    background: var(--white);
+    border: 1px solid var(--main-green-color);
+
+    box-sizing: border-box;
+
+    width: 100%;
+}
+
+th {    
+    text-align: center;
+
+    color: #252733;
+}
+ 
+div {
+    border: 1px solid #DFE0EB;
+    background: #DFE0EB;
+}
+
+tr:nth-child(n+1) td:nth-child(2) {
+    text-align: right;
+}
