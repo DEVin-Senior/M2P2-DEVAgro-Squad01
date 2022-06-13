@@ -55,7 +55,7 @@ export class FuncionariosComponent implements OnInit {
       console.log(Object.entries(elemental))
       
     });
-    //this.addFuncionarios()
+    this.addFuncionarios()
     this.pegaFazenda()
     this.pegaFuncao()
     //this.pegaFazenda()
