@@ -13,7 +13,16 @@ export class FuncionariosComponent implements OnInit {
   localStorageViewObject : Array<Object> =[]
 
   ngOnInit(): void {
-    
+    console.log(this.localStorageView)
+    console.log(this.localStorageView)
+
+
+    this.localStorageView.forEach(element => {
+     console.log( JSON.parse(String(element)))
+      console.log(element)
+      console.log(element.isPrototypeOf)
+      
+    });
 
 
     
@@ -24,5 +33,9 @@ export class FuncionariosComponent implements OnInit {
 
   constroiLsitaDeObj(){}
 
+  
 
 }
+
+
+
