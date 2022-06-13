@@ -10,15 +10,18 @@
 ## Executando a aplicação:
 
 ```bash
-
+ng serve
 ```
+
+## Comandos para Instalar dependências:
+- [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
 
 ## Requisitos Funcionais:
 - [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
 
 
 ## Autores:
-- [Nome da pessoa ](https://www.linkedin.com)
+- [ ](https://www.linkedin.com)
 
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="/squad.jpg" /></a></p>
 

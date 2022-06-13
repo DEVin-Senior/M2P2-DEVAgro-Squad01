@@ -33,12 +33,14 @@
 .sign-input-value {
   padding: 0 10px;
   color: var(--black);
-  border-style: none;
+  border: 1px solid var(--main-green-color);
   font-weight: 500;
 }
 
 .sign-icon-eye {
-  padding-right: 5px;
+  position: absolute;
+  padding-left: 250px;
+  z-index: 2;
 }
 
 :host form {
@@ -53,7 +55,6 @@ label,
 input,
 label {
   align-items: center;
-  border: 1px solid var(--main-green-color);
   border-radius: 10px;
   display: flex;
   justify-content: center;
