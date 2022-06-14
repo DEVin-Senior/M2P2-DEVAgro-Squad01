@@ -10,7 +10,9 @@ export class GraosComponent implements OnInit {
 
   title = 'data-table';
 
-  constructor(private service: TableService) { }
+  constructor() { 
+    
+  }
 
   ngOnInit(): void {
    
