@@ -7,6 +7,7 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
+import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: '/funcionarios/cadastro',
     component:FuncionarioCadastroComponent
+  },
+  {
+    path:'/funcionarios/cadastro/alterar',
+    component:FuncionarioAlteraCadastroComponent
   },
   {
     path: '/graos',
