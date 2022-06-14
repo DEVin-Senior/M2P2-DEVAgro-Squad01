@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 
 export class GraoCadastroComponent implements OnInit {
 
-            mudouValor = new EventEmitter();
+           // mudouValor = new EventEmitter();
             lista:Array<Object>=[]
 
   constructor() { }
@@ -32,6 +32,7 @@ grao_info:any = {
   fazenda: "",
   colheita: "",
   informacoes: "",
+  foto: "",
 }
 
 mudar_nome(nome:string):void{
@@ -76,8 +77,11 @@ click_cadastrar():void{
   localStorage.setItem("quantidade_grao",String(id + 1))
 
   ///Evento 
-  console.log(grao_info_json)
-  console.log(this.grao_info)
+  //console.log(grao_info_json)
+  //console.log(this.grao_info)
+
+
+
 
 }
 
