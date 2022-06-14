@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TableService } from './table.service';
 
 @Component({
   selector: 'app-graos',
