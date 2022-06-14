@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendasComponent } from './components/admin/pages/fazendas/fazendas.component';
+import { FuncionarioAlteraCadastroComponent } from './components/admin/pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+import { FuncionarioCadastroComponent } from './components/admin/pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionariosComponent } from './components/admin/pages/funcionarios/funcionarios.component';
 import { GraosComponent } from './components/admin/pages/graos/graos.component';
 
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: "admin/funcionarios",
     component: FuncionariosComponent
+  },
+  {
+    path:"admin/funcionarios/cadastro",
+    component:FuncionarioCadastroComponent
+  },
+  {
+    path:"admin/funcionarios/cadastro/alterar",
+    component:FuncionarioAlteraCadastroComponent
   },
   {
     path: "admin/graos",
