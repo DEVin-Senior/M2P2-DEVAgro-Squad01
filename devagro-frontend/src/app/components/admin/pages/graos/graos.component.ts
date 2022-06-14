@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraosComponent implements OnInit {
 
-  title = 'data-table';
+  key: string = 'Name';
+  myItem!: string | null;
+  storeName() {
+    localStorage.setItem(this.key, 'Angular');
+    this.myItem = localStorage.getItem(this.key);
+  }
+  SpecificDelete() {
+    localStorage.removeItem('Name');
+  }
 
   constructor() { 
     
