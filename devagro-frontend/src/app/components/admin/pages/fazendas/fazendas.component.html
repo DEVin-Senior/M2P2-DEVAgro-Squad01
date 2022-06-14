@@ -1,4 +1,28 @@
 <app-sidenav></app-sidenav>
 <app-template-body>
   <h1>Fazendas</h1>
+  <form>
+    <div class="conteiner">
+      <div class="form-group">
+        <label for="farmName">NOME</label>
+        <input type="input" class="form-control" id="farmName" placeholder="Nome da fazenda" FormControlName="farmName">
+      </div>
+      <div class="form-group">
+        <label for="grain">GRÃOS</label>
+        <input type="input" class="form-control" id="grain" placeholder="Grãos produzidos" FormControlName="grain">
+      </div>
+      <div class="form-group">
+        <label for="lastHarvestDay">DATA DA ÚLTIMA COLHEITA</label>
+        <input type="input" class="form-control" id="lastHarvestDay" placeholder="Data dd/mm/aaaa" FormControlName="lastHarvestDay">
+      </div>
+      <div class="form-group">
+        <label for="localization">LOCALIZAÇÃO</label>
+        <input type="input" class="form-control" id="localization" placeholder="Localização" FormControlName="localization">
+      </div>
+    </div>
+    <div class="col text-center">
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+  </form>
+
 </app-template-body>
