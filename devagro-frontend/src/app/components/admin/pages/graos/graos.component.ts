@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TableService } from './table.service';
 
 @Component({
   selector: 'app-graos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraosComponent implements OnInit {
 
-  constructor() { }
+  title = 'data-table';
+
+  constructor(private service: TableService) { }
 
   ngOnInit(): void {
+   
   }
 
 }

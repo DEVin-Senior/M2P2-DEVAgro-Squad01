@@ -22,6 +22,7 @@ import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/faze
 import { GraosCadastroComponent } from './pages/graos/graos-cadastro/graos-cadastro.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
