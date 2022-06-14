@@ -17,6 +17,10 @@ export class GraosComponent implements OnInit {
     localStorage.removeItem('Name');
   }
 
+  deleteName() {
+    localStorage.clear();
+  }
+
   constructor() { 
     
   }
