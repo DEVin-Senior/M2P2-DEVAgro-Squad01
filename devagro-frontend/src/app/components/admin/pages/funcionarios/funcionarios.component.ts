@@ -24,6 +24,7 @@ export class FuncionariosComponent implements OnInit {
   listNome:Array<any>=[]
   listFazenda:Array<any>=[]
   listFuncao:Array<any>=[]
+  listAtivo:Array<any>=[]
   
 
   ngOnInit(): void {
@@ -58,6 +59,7 @@ export class FuncionariosComponent implements OnInit {
     this.addFuncionarios()
     this.pegaFazenda()
     this.pegaFuncao()
+    this.pegaAtividade()
     //this.pegaFazenda()
 
 
@@ -129,6 +131,7 @@ export class FuncionariosComponent implements OnInit {
       });
 
     }
+
   
 
  
@@ -136,7 +139,24 @@ export class FuncionariosComponent implements OnInit {
  
   pegaTelefone(){}
   pegaFUncaoPrincipal(){}
-  pegaAtividade(){}
+  pegaAtividade(){
+    this.localStorageViewObject.forEach(elemental => {
+      Object.entries(elemental).forEach(element=>{
+        if(element[0]=="ativo"){
+          console.log(element[1])
+          this.ativo=element[1]
+          console.log(this.ativo)
+          this.listAtivo.push(this.ativo)
+          console.log(this.listAtivo)
+          return element[1].toString
+        }
+        
+      })
+  
+      console.log(Object.entries(elemental))
+      
+    });
+  }
 
   
 
