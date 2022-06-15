@@ -69,6 +69,7 @@ export class FazendasComponent implements OnInit {
     localStorage.setItem("FAZENDA_" + String(id),fazenda_info_json)
 
     localStorage.setItem("quantidade_Fazendas",String(id + 1))
+    
     ///EVENT EMITTER
     console.log(fazenda_info_json)
     console.log(this.Fazenda_info)
