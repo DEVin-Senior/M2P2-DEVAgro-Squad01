@@ -3,63 +3,36 @@
 
   <h1>Fazendas</h1>
 
-  <table class="table table-borderless">
+  <div class="fundo-tabela">
+    <h2 class="titulo" style="text-align: center">Propriedades cadastradas</h2>
 
-    <thead class="table-light">
-      <tr>
-        <th  colspan="2">Propriedades cadastradas</th>
-      </tr>
-      <tr>
-        <td>Nome da propriedade</td>
-        <td>Previsão de coleita</td>
-      </tr>
-    </thead>
+    <table class="table table-hover">
 
-    <tbody class="table-group-divider">
-      <tr>
-        <td>Estância das vivências</td>
-        <td>25/08/2022</td>
-      </tr>
-      <tr>
-        <td>Arrozeira do futuro</td>
-        <td>14/09/2022</td>
-      </tr>
-      <tr>
-        <td>Fazenda milharal</td>
-        <td>15/09/2022</td>
-      </tr>
-      <tr>
-        <td>Fazenda Horizonte</td>
-        <td>08/10/2022</td>
-      </tr>
-      <tr>
-        <td>Fazenda Brasil</td>
-        <td>30/12/2022</td>
-      </tr>
-    </tbody>
+      <thead>
+        <tr>
+          <th scope="col">Nome da propriedade</th>
+          <th scope="col">Previsão de coleita</th>
+        </tr>
+      </thead>
 
-  </table>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let fazenda of listaFazenda">
+          <td>{{fazenda.fazenda}}</td>
+          <td>{{fazenda.colheita}}</td>
+        </tr>
+      </tbody>
 
- <!-- <table class="table align-middle mb-0 bg-white">
-    <thead class="bg-light">
-      <tr>
-        <th>Detalhes dos funcionários</th>
-        <th>Fazenda Alocado</th>
-        <th>Função Principal</th>
-        <th>Ativo</th>
-        <th>Configurações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>
-        <h1 *ngFor="let fazenda of listaFazendas">{{fazenda}}</h1>
-      </td>
-      <td>
-        <h1 *ngFor="let colheita of listaFazendas">{{colheita}}</h1>  
-      </td>
-    </tr>
-  </tbody>
-</table>-->
-  <button (click)=click_adicionarFazendas() type="button" class="btn btn-success btn-lg btn-block">Cadastrar Fazenda</button>
+      <tfoot>
+        <tr></tr>
+      </tfoot>
+
+    </table> 
+
+  </div>
+
+  <div class="col text-center">
+    <p></p>
+    <button (click)=click_adicionarFazendas() type="button" class="btn btn-success btn-lg btn-block mx-auto">CADASTRAR NOVA FAZENDA</button>
+  </div>
 
 </app-template-body>
