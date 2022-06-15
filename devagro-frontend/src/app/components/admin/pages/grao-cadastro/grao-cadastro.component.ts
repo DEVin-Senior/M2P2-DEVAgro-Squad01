@@ -8,19 +8,13 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 
 export class GraoCadastroComponent implements OnInit {
 
-           // mudouValor = new EventEmitter();
-            lista:Array<Object>=[]
-
-  constructor() { }
+   constructor() { }
 
   ngOnInit(): void {
     this.listaGraosArmazenamento = JSON.parse(String(localStorage.getItem("listaGraos"))) || []
-    localStorage.setItem("listaGraos",JSON.stringify(this.listaGraosArmazenamento))//Array( JSON.parse(String(localStorage.getItem("listaGraos"))))
+    localStorage.setItem("listaGraos",JSON.stringify(this.listaGraosArmazenamento))
      console.log(this.listaGraosArmazenamento)
   }
-
-  onstructor() { }
-  valor:any
 
 listaGraosArmazenamento :Array<Object>=[] 
 
@@ -75,14 +69,6 @@ click_cadastrar():void{
   localStorage.setItem("grao_" + String(id),grao_info_json)
 
   localStorage.setItem("quantidade_grao",String(id + 1))
-
-  ///Evento 
-  //console.log(grao_info_json)
-  //console.log(this.grao_info)
-
-
-
-
 }
 
 pegar_grao(id:Number):any{
