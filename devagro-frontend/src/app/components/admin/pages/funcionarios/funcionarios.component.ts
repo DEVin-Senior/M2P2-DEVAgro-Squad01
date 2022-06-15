@@ -29,45 +29,35 @@ export class FuncionariosComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.localStorageViewObject.forEach(element => {
-      console.log(element)
-      
+    if (Object.keys(this.localStorageView).length != 0) {
+      this.localStorageViewObject.forEach((element) => {
+        console.log(element);
+      });
+    }
+    
+    console.log(this.localStorageView);
+    console.log(this.localStorageView);
+
+    if (Object.keys(this.localStorageView).length != 0) {
+      this.localStorageView.forEach((element) => {
+        console.log(JSON.parse(String(element)));
+        this.localStorageViewObject.push(JSON.parse(String(element)));
+        console.log(this.localStorageViewObject);
+        console.log(element);
+        //console.log(element.isPrototypeOf)
+      });
+    }
+
+
+    this.localStorageViewObject.forEach((elemental) => {
+      Object.entries(elemental).forEach((element) => {});
+      console.log(Object.entries(elemental));
     });
-    console.log(this.localStorageView)
-    console.log(this.localStorageView)
 
-
-    this.localStorageView.forEach(element => {
-      console.log( JSON.parse(String(element)))
-      this.localStorageViewObject.push(JSON.parse(String(element)))
-      console.log(this.localStorageViewObject)
-       console.log(element)
-       //console.log(element.isPrototypeOf)
-       
-     });
-
-
-    this.localStorageViewObject.forEach(elemental => {
-      Object.entries(elemental).forEach(element=>{
-       
-      
-      })
-      console.log(Object.entries(elemental))
-      
-    });
     this.addFuncionarios()
     this.pegaFazenda()
     this.pegaFuncao()
     //this.pegaFazenda()
-
-
-
-    
-
-    
-
-
-    
 
     
   }

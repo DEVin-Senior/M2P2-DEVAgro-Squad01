@@ -1,4 +1,27 @@
 <app-sidenav></app-sidenav>
 <app-template-body>
   <h1>Fazendas</h1>
+  <form>
+    <div class="conteiner">
+      <div class="form-group">
+        <label for="nome">NOME</label>
+        <input type="input" class="form-control" id="nome" placeholder="Nome da fazenda" #NOME (keyup)=mudar_nome(NOME.value)>
+      </div>
+      <div class="form-group">
+        <label for="grao">GRÃOS</label>
+        <input type="input" class="form-control" id="grao" placeholder="Grãos produzidos" #GRAO (keyup)=mudar_grao(GRAO.value)>
+      </div>
+      <div class="form-group">
+        <label for="ultima_colheita">DATA DA ÚLTIMA COLHEITA</label>
+        <input type="date" class="form-control" id="ultima_colheita" placeholder="Data dd/mm/aaaa" #ULTIMA_COLHEITA (keyup)=mudar_ultima_colheita(ULTIMA_COLHEITA.value)>
+      </div>
+      <div class="form-group">
+        <label for="localizacao">LOCALIZAÇÃO</label>
+        <input type="input" class="form-control" id="localizacao" placeholder="Localização" #LOCALIZACAO (keyup)=mudar_localizacao(LOCALIZACAO.value)>
+      </div>
+    </div>
+    <div class="col text-center">
+      <button type="submit" class="" (click)="onSubmit()">Cadastrar</button>
+    </div>
+  </form>
 </app-template-body>

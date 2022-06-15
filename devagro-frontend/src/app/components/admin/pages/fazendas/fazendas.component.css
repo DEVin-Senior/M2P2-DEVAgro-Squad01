@@ -1,1 +1,26 @@
+.conteiner{
+  border: 1px solid var(--main-green-color);
+  border-radius: 8px;
+  padding: 2rem 2rem;
+  background-color: var(--white);
+}
 
+.form-control{
+  /* padding: 10px; */
+  border: 1px solid var(--main-green-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: var(--main-green-color);
+}
+
+button{
+  background-color: var(--main-green-color);
+  margin-top: 2rem;
+  height:5rem;
+  width:35em;
+}
+
+h1{
+  color: var(--main-green-color);
+  margin-bottom: 5rem;
+}
