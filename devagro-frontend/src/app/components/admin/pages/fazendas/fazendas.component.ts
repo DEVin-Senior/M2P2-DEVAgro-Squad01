@@ -9,15 +9,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class FazendasComponent implements OnInit {
 
 
-
-  form: FormGroup = this.fb.group({
-    farmName: [''],
-    grain: [''],
-    lastHarvestDay: [''],
-    localization: ['']
-  })
-
-  constructor(private fb: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.listaFazendasArmazenamento = JSON.parse(String(localStorage.getItem("listaFazendas"))) || []
