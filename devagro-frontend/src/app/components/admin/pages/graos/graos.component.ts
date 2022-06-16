@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Grao } from './grao';
 import { FormsModule } from '@angular/forms';
 import { GRAOS } from './mock-grao';
@@ -9,6 +9,8 @@ import { GRAOS } from './mock-grao';
   styleUrls: ['./graos.component.css']
 })
 export class GraosComponent implements OnInit {
+
+  @Input() public titulo: string = "Grãos"
 
   graos = GRAOS;
 
@@ -22,8 +24,8 @@ export class GraosComponent implements OnInit {
     this.selectedGrao = grao;
   }
 
-  
-  
+
+
   htmlstring: string = '';
   key: string = 'Graos';
   myItem!: string | null;
@@ -43,11 +45,11 @@ export class GraosComponent implements OnInit {
     this.graos = JSON.parse(String(localStorage.getItem("Graos")));
   }
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {
-   
+
   }
 
 }

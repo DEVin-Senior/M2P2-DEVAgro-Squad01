@@ -1,4 +1,4 @@
-import { Component, OnInit, TRANSLATIONS } from '@angular/core';
+import { Component, Input, OnInit, TRANSLATIONS } from '@angular/core';
 
 @Component({
   selector: 'app-funcionarios',
@@ -7,6 +7,7 @@ import { Component, OnInit, TRANSLATIONS } from '@angular/core';
 })
 export class FuncionariosComponent implements OnInit {
 
+  @Input() public titulo: string = "Funcionários"
 
  nome:string=""
   id:Number = 0
@@ -24,7 +25,7 @@ export class FuncionariosComponent implements OnInit {
   listNome:Array<any>=[]
   listFazenda:Array<any>=[]
   listFuncao:Array<any>=[]
-  
+
 
   ngOnInit(): void {
 
@@ -34,7 +35,7 @@ export class FuncionariosComponent implements OnInit {
         console.log(element);
       });
     }
-    
+
     console.log(this.localStorageView);
     console.log(this.localStorageView);
 
@@ -59,7 +60,7 @@ export class FuncionariosComponent implements OnInit {
     this.pegaFuncao()
     //this.pegaFazenda()
 
-    
+
   }
 
   pegaNome():any{
@@ -73,11 +74,11 @@ export class FuncionariosComponent implements OnInit {
           console.log(this.listNome)
           return element[1].toString
         }
-        
+
       })
-  
+
       console.log(Object.entries(elemental))
-      
+
     });
     }
     pegaFazenda(){
@@ -91,11 +92,11 @@ export class FuncionariosComponent implements OnInit {
             console.log(this.listFazenda)
             return element[1].toString
           }
-          
+
         })
-    
+
         console.log(Object.entries(elemental))
-        
+
       });
 
     }
@@ -111,37 +112,37 @@ export class FuncionariosComponent implements OnInit {
             console.log(this.listFuncao)
             return element[1].toString
           }
-          
+
         })
-    
+
         console.log(Object.entries(elemental))
-        
+
       });
 
     }
-  
 
- 
- 
- 
+
+
+
+
   pegaTelefone(){}
   pegaFUncaoPrincipal(){}
   pegaAtividade(){}
 
-  
+
 
 
   addFuncionarios(){
 
-    
-      
-      
-    
+
+
+
+
    // product.preventDefault();
 
    //CRIA UM ELEMENTO TR E ATRIBUI UMA CLASSE A ELE
     const tr = document.createElement('tr')
-    tr.classList.add('tr'); 
+    tr.classList.add('tr');
 
     ///BUSCA O ELEMENTO TABLE VIA DOM
     //DEFINE O ELEMENTO TR CRAIDO ANTERIORMENTE COMO ELEMENTO FILHO DE TABLE
@@ -153,7 +154,7 @@ export class FuncionariosComponent implements OnInit {
     td2.classList.add('td2');
     const td1 = document.createElement("td")
     td1.classList.add('td1');
-    
+
     const td3 = document.createElement("td")
     td3.classList.add('td3');
     const td4 = document.createElement("td")
@@ -189,21 +190,21 @@ export class FuncionariosComponent implements OnInit {
          p1.classList.add("id:")
          console.log(p1.className)
          //p1.className=this.nome
-         
+
 
          divParagrafo.appendChild(p2)
-         
-         
-         
+
+
+
         // p2.innerText="xxxxxxxxx"
-    
-        
+
+
 
 
     //MANIPULA ELEMENTOS DENTRO DE "TD2"
 
 
-    
+
   }
 
 
@@ -214,12 +215,12 @@ export class FuncionariosComponent implements OnInit {
       console.log(this.localStorageViewObject)
        console.log(element)
        console.log(element.isPrototypeOf)
-       
+
      });
   }
 
   addProduct2(){
-     
+
 
 }
 }
