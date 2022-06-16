@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 // Rotas
 import { AdminRoutingModule } from './admin-routing.module';
@@ -46,7 +47,8 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule
     
   ]
 })
