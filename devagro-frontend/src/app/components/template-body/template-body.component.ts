@@ -6,7 +6,6 @@ import { Component, Input, ElementRef } from '@angular/core';
   styleUrls: ['./template-body.component.css'],
 })
 export class TemplateBodyComponent {
-
   private _title: any;
 
   @Input() get title(): string {
@@ -14,10 +13,8 @@ export class TemplateBodyComponent {
   }
   set title(value: string) {
     this._title = value;
-    this.elementRef.nativeElement.title = "";
+    this.elementRef.nativeElement.title = '';
   }
 
   constructor(private elementRef: ElementRef) {}
-
-
 }
