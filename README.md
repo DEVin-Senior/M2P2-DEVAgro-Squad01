@@ -14,12 +14,15 @@ O objetivo deste documento é facilitar a compreensão do escopo do projeto e de
 
 Consulte **Implantação** para saber mais informações sobre implantar o projeto.
 
+<<<<<<< HEAD
 ```bash
 <<<<<<< HEAD
 =======
 ng serve
 >>>>>>> main
 ```
+=======
+>>>>>>> main
 
 ## Comandos para Instalar dependências:
 - [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
@@ -32,19 +35,6 @@ ng serve
 
 Aplicativos e ferramentas que devem estar instalados e executando:
 
-## Autores:
-- [ ](https://www.linkedin.com)
-
-
-NodeJS (Versão 16.15.1 ou Superior).
-
-NPM (8.12.1 ou Superior).
-
-Angular (14.0.0 ou Superior).
-
-VsCode (1.68.0 ou Superior).
-
-Navegador WEB (Chrome, Firefox, Safari).
 
 ## Exemplo a ser seguido:
 
