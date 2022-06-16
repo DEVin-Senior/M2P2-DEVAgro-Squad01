@@ -1,5 +1,5 @@
 <app-sidenav></app-sidenav>
-<app-template-body>
+<app-template-body [title]="titulo">
 
   <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
@@ -13,14 +13,14 @@
       </tr>
     </thead>
     <tbody>
-      
+
      <tr>
-      
+
        <td class="td-detalhe">
             <div *ngFor="let nome of listNome" style="text-align:center" class="div-detalhe">{{nome}}</div>
         </td>
 
-      
+
 
     <td class="td-vazio">
         <div *ngFor="let fazenda of listFazenda" style="text-align:center" class="div-fazenda"></div>
@@ -42,13 +42,13 @@
       <div *ngFor="let ativo of listAtivo" style="text-align:center" class="div-config"></div>
     </td>
 
-      
-      
-      
-        
-        
-      
-        
+
+
+
+
+
+
+
 
        <!-- <td>
           <div class="d-flex align-items-center">
@@ -155,7 +155,7 @@
     </tbody>
   </table>
 
-  
+
   <button type="button" class="button">
     <span class="button__text">+</span>
   </button>

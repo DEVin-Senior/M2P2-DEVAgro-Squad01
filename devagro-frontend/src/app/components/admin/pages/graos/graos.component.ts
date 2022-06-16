@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Object } from './grao';
 import { GRAOS } from './mock-grao';
 import { Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./graos.component.css']
 })
 export class GraosComponent implements OnInit {
+
+  @Input() public titulo: string = "Grãos"
 
   graos = GRAOS;
 
@@ -43,7 +45,7 @@ export class GraosComponent implements OnInit {
   };
 
   ngOnInit(): void {
-   
+
   }
 
 }
