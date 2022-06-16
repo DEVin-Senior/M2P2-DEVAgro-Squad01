@@ -7,7 +7,8 @@
   <table class="graos">
     <tr>
       <th>Grão</th>
-      <th >Fazenda</th>
+      <th>Fazenda</th>
+      <th>Colheita</th>
       <th>Editar/Deletar</th>
       <th>Salvar</th>
     </tr>
@@ -21,11 +22,14 @@
       <td >
         <span class="fazenda-tabela">{{grao.fazenda}}</span>
       </td>
+      <td >
+        <span class="colheita-tabela">{{grao.colheita}}</span>
+      </td>
       <td>
         <button class="delete-grao" (click)="SpecificDelete(grao)">Delete</button>
       </td>
       <td>
-        <button class="delete-grao" (click)="storeGrao()">Salvar</button>
+        <button class="salva-grao" (click)="storeGrao()">Salvar</button>
       </td>
     </tr>
   </table>
