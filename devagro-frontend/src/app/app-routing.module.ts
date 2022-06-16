@@ -6,6 +6,8 @@ import { FuncionarioAlteraCadastroComponent } from './components/admin/pages/fun
 import { FuncionarioCadastroComponent } from './components/admin/pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionariosComponent } from './components/admin/pages/funcionarios/funcionarios.component';
 import { GraosComponent } from './components/admin/pages/graos/graos.component';
+import { GraoCadastroComponent } from './components/admin/pages/grao-cadastro/grao-cadastro.component';
+
 
 const routes: Routes = [
   {
@@ -41,6 +43,10 @@ const routes: Routes = [
   {
     path: "admin/graos",
     component: GraosComponent
+  },
+  {
+    path: "admin/grao-cadastro",
+    component: GraoCadastroComponent
   }
 ];
 
