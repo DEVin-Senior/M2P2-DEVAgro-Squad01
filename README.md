@@ -14,15 +14,6 @@ O objetivo deste documento é facilitar a compreensão do escopo do projeto e de
 
 Consulte **Implantação** para saber mais informações sobre implantar o projeto.
 
-<<<<<<< HEAD
-```bash
-<<<<<<< HEAD
-=======
-ng serve
->>>>>>> main
-```
-=======
->>>>>>> main
 
 ## Comandos para Instalar dependências:
 - [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
