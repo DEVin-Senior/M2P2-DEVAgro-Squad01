@@ -108,10 +108,3 @@ button{
   .slider.round:before {
     border-radius: 50%;
   }
-
-  .h1-up{
-    margin-bottom: 50px;
-  }
-  .h1-down{
-    margin-top: 50px;
-  }

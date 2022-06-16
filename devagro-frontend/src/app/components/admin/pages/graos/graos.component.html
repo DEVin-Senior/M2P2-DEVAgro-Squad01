@@ -3,4 +3,48 @@
 
   <h1>Grãos</h1>
 
+  <button (click)="deleteGraos()">Deletar Tudo</button>
+<ul class="">
+  <table class="graos">
+    <tr>
+      <th>Grão</th>
+      <th >Fazenda</th>
+      <th>Editar/Deletar</th>
+      <th>Salvar</th>
+    </tr>
+    <tr *ngFor="let grao of graos">
+      <td>
+        <button class="grao-botao" [class.selected]="grao === selectedGrao" type="button" (click)="onSelect(grao)">
+          <span class="badge">{{grao.id}}</span>
+          <span class="name">{{grao.name}}</span>
+        </button>
+      </td>
+      <td >
+        <span class="fazenda-tabela">{{grao.name}}</span>
+      </td>
+      <td>
+        <button class="delete-grao" (click)="SpecificDelete(grao)">Delete</button>
+      </td>
+      <td>
+        <button class="delete-grao" (click)="storeGrao()">Salvar</button>
+      </td>
+    </tr>
+  </table>
+</ul>
+
+<div *ngIf="selectedGrao">
+  <h2>{{selectedGrao.name | uppercase}} Details</h2>
+  <div>id: {{selectedGrao.id}}</div>
+  <div>
+    <label for="grao-name">Grão name: </label>
+    <input id="grao-name" [(ngModel)]="selectedGrao.name" placeholder="name">
+  </div>
+</div>
+
+
+
+  <button type="button" class="button">
+    <span class="button__text">+</span>
+  </button>
+
 </app-template-body>

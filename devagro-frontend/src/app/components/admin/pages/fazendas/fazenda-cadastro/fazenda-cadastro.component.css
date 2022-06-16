@@ -1,0 +1,36 @@
+.conteiner{
+  border: 1px solid var(--main-green-color);
+  border-radius: 8px;
+  padding: 2rem 2rem;
+  background-color: var(--white);
+}
+
+.form-control{
+  border: 1px solid var(--main-green-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: var(--main-green-color);
+}
+
+button{
+  background-color: var(--main-green-color);
+  margin-top: 2rem;
+  height:5rem;
+  width:35em;
+  color: var(--white);
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #4CAF50;
+}
+
+h1{
+  color: var(--main-green-color);
+  margin-bottom: 5rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}

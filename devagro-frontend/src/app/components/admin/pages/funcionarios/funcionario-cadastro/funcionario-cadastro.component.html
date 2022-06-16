@@ -1,0 +1,40 @@
+<<app-sidenav></app-sidenav>
+<app-template-body>
+
+  <h1>Funcionarios</h1>
+
+  <div class="quadro">
+
+    <p></p>
+    <h2 class="descricao">NOME</h2>
+    <input type="text" placeholder="Nome" class="entrada_texto" #NOME (keyup)=mudar_nome(NOME.value) >
+
+    <p></p>
+    <h2 class="descricao">FAZENDA</h2>
+    <input type="text" placeholder="seleciona a fazenda" class="entrada_texto" #FAZENDA  (keyup)=mudar_fazenda(FAZENDA.value) >
+
+    <p></p>
+    <h2 class="descricao">CPF</h2>
+    <input type="number" placeholder="CPF" class="entrada_texto" #CPF (keyup)=mudar_CPF(CPF.value)>
+
+    <p></p>
+    <h2 class="descricao">TELEFONE</h2>
+    <input type="number" placeholder="Telefone" class="entrada_texto" #TELEFONE (keyup)=mudar_telefone(TELEFONE.value)>
+    
+    <p></p>
+    <h2 class="descricao">FUNÇÃO PRINCIPAL</h2>
+    <input type="Função principal"  placeholder="Função principal" class="entrada_texto" #FUNCAO_PRINCIPAL (keyup)=mudar_funcao_princila(FUNCAO_PRINCIPAL.value) > 
+
+    <p></p>
+    <h2 class="descricao">ATIVO</h2>
+    <label class="switch">
+      <input type="checkbox" #ATIVO (change)=mudar_ativo(ATIVO.checked)>
+      <span class="slider round"></span>
+    </label>
+
+    <p></p>
+  </div>
+
+  <button (click)=apertar_cadastrar()>cadastrar</button>
+
+</app-template-body>
