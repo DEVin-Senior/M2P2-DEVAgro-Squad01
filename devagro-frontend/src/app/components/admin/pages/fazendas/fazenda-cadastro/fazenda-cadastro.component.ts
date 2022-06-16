@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fazenda-cadastro',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fazenda-cadastro.component.css']
 })
 export class FazendaCadastroComponent implements OnInit {
+
+  constructor(private router: Router){}
+
   ngOnInit(): void {
     this.listaFazendasArmazenamento = JSON.parse(String(localStorage.getItem("listaFazendas"))) || []
     localStorage.setItem("listaFazendas",JSON.stringify(this.listaFazendasArmazenamento))
@@ -46,14 +50,15 @@ export class FazendaCadastroComponent implements OnInit {
     else{
       this.Fazenda_info.id = id
     }
-    //STRINGFA O OBJ FAZENDA
-    //let fazenda_info_json: string = JSON.stringify(this.Fazenda_info)
+
     //ADD O OBJETO A LISTA
     this.listaFazendasArmazenamento.push(this.Fazenda_info);
     //REFERENCIA O LOCAL STORAGE A LISTA
     localStorage.setItem("listaFazendas",JSON.stringify(this.listaFazendasArmazenamento))
 
     localStorage.setItem("quantidade_fazendas",String(id + 1))
+
+    this.router.navigateByUrl('/admin/fazendas');
   }
 
 }
