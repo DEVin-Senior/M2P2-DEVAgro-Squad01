@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FazendaCadastroComponent } from './components/admin/pages/fazendas/fazenda-cadastro/fazenda-cadastro.component';
 import { FazendasComponent } from './components/admin/pages/fazendas/fazendas.component';
 import { FuncionarioCadastroComponent } from './components/admin/pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionariosComponent } from './components/admin/pages/funcionarios/funcionarios.component';
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "admin/fazendas",
     component: FazendasComponent
+  },
+  {
+    path: "admin/fazendas/cadastro",
+    component: FazendaCadastroComponent
   },
   {
     path: "admin/funcionarios",

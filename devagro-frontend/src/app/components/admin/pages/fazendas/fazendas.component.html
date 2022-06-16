@@ -1,4 +1,5 @@
 <app-sidenav></app-sidenav>
+
 <app-template-body>
 
   <h1>Fazendas</h1>
@@ -17,8 +18,8 @@
 
       <tbody class="table-group-divider">
         <tr *ngFor="let fazenda of listaFazenda">
-          <td>{{fazenda.fazenda}}</td>
-          <td>{{fazenda.colheita}}</td>
+          <td>{{fazenda.nome}}</td>
+          <td>{{fazenda.ultima_colheita}}</td>
         </tr>
       </tbody>
 
@@ -32,7 +33,7 @@
 
   <div class="col text-center">
     <p></p>
-    <button (click)=click_adicionarFazendas() type="button" class="btn btn-success btn-lg btn-block mx-auto">CADASTRAR NOVA FAZENDA</button>
+    <a routerLink="/admin/fazendas/cadastro"><button type="button" class="btn btn-success btn-lg btn-block mx-auto">CADASTRAR NOVA FAZENDA</button></a>
   </div>
 
 </app-template-body>
