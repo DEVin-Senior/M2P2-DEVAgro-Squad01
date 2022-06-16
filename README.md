@@ -7,15 +7,31 @@ Desenvolvido pela SQUAD 1 - Turma DevInHouse.
 
 ## 🚀 Descrição
 
+
 Essas instruções permitirão que você obtenha uma cópia do projeto em sua máquina local para fins de desenvolvimento e testes.
 
 O objetivo deste documento é facilitar a compreensão do escopo do projeto e de como funciona.
 
 Consulte **Implantação** para saber mais informações sobre implantar o projeto.
 
+```bash
+ng serve
+```
+
+## Comandos para Instalar dependências:
+- [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
+
+## Requisitos Funcionais:
+- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
+
+
 ### 📋 Requisitos Funcionais
 
 Aplicativos e ferramentas que devem estar instalados e executando:
+
+## Autores:
+- [ ](https://www.linkedin.com)
+
 
 NodeJS (Versão 16.15.1 ou Superior).
 
@@ -191,4 +207,3 @@ Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/f
 ## 🎁 Expressões de Gratidão
 
 Obrigado a todos que participaram e ajudaram esse projeto á ser desenvolvido.
-Obrigado.

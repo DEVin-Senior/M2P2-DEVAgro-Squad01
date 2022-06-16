@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-fazendas',
@@ -6,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fazendas.component.css']
 })
 export class FazendasComponent implements OnInit {
-
-  constructor() { }
 
   ngOnInit(): void {
   }
