@@ -191,3 +191,4 @@ Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/f
 ## 🎁 Expressões de Gratidão
 
 Obrigado a todos que participaram e ajudaram esse projeto á ser desenvolvido.
+Obrigado.
