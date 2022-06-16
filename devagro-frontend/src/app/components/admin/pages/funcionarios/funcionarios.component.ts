@@ -8,7 +8,7 @@ import { Component, OnInit, TRANSLATIONS } from '@angular/core';
 export class FuncionariosComponent implements OnInit {
 
 
- nome:string=""
+  nome:string=""
   id:Number = 0
   fazenda:string= ""
   CPF:string= ""
@@ -24,6 +24,7 @@ export class FuncionariosComponent implements OnInit {
   listNome:Array<any>=[]
   listFazenda:Array<any>=[]
   listFuncao:Array<any>=[]
+  listAtivo:Array<any>=[]
   
 
   ngOnInit(): void {
@@ -34,30 +35,42 @@ export class FuncionariosComponent implements OnInit {
         console.log(element);
       });
     }
-    
-    console.log(this.localStorageView);
-    console.log(this.localStorageView);
-
-    if (Object.keys(this.localStorageView).length != 0) {
-      this.localStorageView.forEach((element) => {
-        console.log(JSON.parse(String(element)));
-        this.localStorageViewObject.push(JSON.parse(String(element)));
-        console.log(this.localStorageViewObject);
-        console.log(element);
-        //console.log(element.isPrototypeOf)
-      });
-    }
+    console.log(this.localStorageView)
+    console.log(this.localStorageView)
 
 
-    this.localStorageViewObject.forEach((elemental) => {
-      Object.entries(elemental).forEach((element) => {});
-      console.log(Object.entries(elemental));
+    this.localStorageView.forEach(element => {
+      console.log( JSON.parse(String(element)))
+      this.localStorageViewObject.push(JSON.parse(String(element)))
+      console.log(this.localStorageViewObject)
+       console.log(element)
+       //console.log(element.isPrototypeOf)
+       
+     });
+
+
+    this.localStorageViewObject.forEach(elemental => {
+      Object.entries(elemental).forEach(element=>{
+       
+      
+      })
+      console.log(Object.entries(elemental))
+      
     });
-
     this.addFuncionarios()
     this.pegaFazenda()
     this.pegaFuncao()
+    this.pegaAtividade()
     //this.pegaFazenda()
+
+
+
+    
+
+    
+
+
+    
 
     
   }
@@ -119,6 +132,7 @@ export class FuncionariosComponent implements OnInit {
       });
 
     }
+
   
 
  
@@ -126,7 +140,24 @@ export class FuncionariosComponent implements OnInit {
  
   pegaTelefone(){}
   pegaFUncaoPrincipal(){}
-  pegaAtividade(){}
+  pegaAtividade(){
+    this.localStorageViewObject.forEach(elemental => {
+      Object.entries(elemental).forEach(element=>{
+        if(element[0]=="ativo"){
+          console.log(element[1])
+          this.ativo=element[1]
+          console.log(this.ativo)
+          this.listAtivo.push(this.ativo)
+          console.log(this.listAtivo)
+          return element[1].toString
+        }
+        
+      })
+  
+      console.log(Object.entries(elemental))
+      
+    });
+  }
 
   
 
@@ -223,6 +254,3 @@ export class FuncionariosComponent implements OnInit {
 
 }
 }
-
-
-
