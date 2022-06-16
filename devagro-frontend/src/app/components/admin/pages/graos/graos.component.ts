@@ -12,20 +12,13 @@ export class GraosComponent implements OnInit {
 
   graos = GRAOS;
 
-  /* grao: Grao = {
-    id: 1,
-    nome: 'Windstorm', 
-    fazenda: 'Serrinha',
-    colheita: '05/02/23'
-  }; */
-
   selectedGrao?: Object;
   onSelect(grao: Object): void {
     this.selectedGrao = grao;
   }
 
   htmlstring: string = '';
-  key: string = 'listaGraos';
+  key: any = 'listaGraos';
   myItem!: any | null;
   storeGrao() {
     localStorage.setItem(this.key, JSON.stringify(this.graos));
