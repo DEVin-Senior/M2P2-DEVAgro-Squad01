@@ -11,6 +11,9 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { TemplateBodyComponent } from '../template-body/template-body.component';
+
+import { GraoCadastroComponent } from './pages/grao-cadastro/grao-cadastro.component';
+
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +25,7 @@ import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/faze
 import { GraosCadastroComponent } from './pages/graos/graos-cadastro/graos-cadastro.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +40,7 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     GraosCadastroComponent,
     FuncionarioCadastroComponent,
     FuncionarioAlteraCadastroComponent
+
   ],
   imports: [
     CommonModule,
