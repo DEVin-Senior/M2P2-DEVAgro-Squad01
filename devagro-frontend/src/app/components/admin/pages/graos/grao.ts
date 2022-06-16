@@ -1,4 +1,8 @@
-export interface Grao {
+export interface Object {
     id: number;
-    name: string;
+    nome: string;
+    fazenda: string;
+    colheita: string;
+    informacao: string;
+    foto: string;
   }

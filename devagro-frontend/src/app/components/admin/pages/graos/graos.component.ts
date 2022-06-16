@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Grao } from './grao';
-import { FormsModule } from '@angular/forms';
+import { Object } from './grao';
 import { GRAOS } from './mock-grao';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-graos',
@@ -12,27 +12,27 @@ export class GraosComponent implements OnInit {
 
   graos = GRAOS;
 
-  grao: Grao = {
+  /* grao: Grao = {
     id: 1,
-    name: 'Windstorm'
-  };
+    nome: 'Windstorm', 
+    fazenda: 'Serrinha',
+    colheita: '05/02/23'
+  }; */
 
-  selectedGrao?: Grao;
-  onSelect(grao: Grao): void {
+  selectedGrao?: Object;
+  onSelect(grao: Object): void {
     this.selectedGrao = grao;
   }
 
-  
-  
   htmlstring: string = '';
-  key: string = 'Graos';
-  myItem!: string | null;
+  key: string = 'listaGraos';
+  myItem!: any | null;
   storeGrao() {
     localStorage.setItem(this.key, JSON.stringify(this.graos));
-    this.myItem = localStorage.getItem(this.key);
-    this.graos = JSON.parse(String(localStorage.getItem("Graos")));
+    /* this.myItem = localStorage.getItem(this.key); */
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
-  SpecificDelete(grao: Grao) {
+  SpecificDelete(grao: Object) {
     this.graos = this.graos.filter(h => h !== grao);
     localStorage.setItem(this.key, JSON.stringify(this.graos));
   }
@@ -40,11 +40,16 @@ export class GraosComponent implements OnInit {
   deleteGraos() {
     localStorage.clear();
     this.myItem = '';
-    this.graos = JSON.parse(String(localStorage.getItem("Graos")));
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
 
-  constructor() { 
+  constructor(private router: Router) {
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
+
+  btnClick = () => {
+    this.router.navigateByUrl('/admin/grao-cadastro');
+  };
 
   ngOnInit(): void {
    
