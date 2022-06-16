@@ -5,6 +5,7 @@
   <button class="deletar-tudo" (click)="deleteGraos()">Deletar Tudo</button>
 <ul class="">
   <table class="graos">
+    <thead>
     <tr>
       <th>Grão</th>
       <th>Fazenda</th>
@@ -12,6 +13,8 @@
       <th>Editar/Deletar</th>
       <th>Salvar</th>
     </tr>
+  </thead>
+  <tbody>
     <tr *ngFor="let grao of graos">
       <td>
         <button class="grao-botao" [class.selected]="grao === selectedGrao" type="button" (click)="onSelect(grao)">
@@ -32,7 +35,9 @@
         <button class="delete-grao" (click)="storeGrao()">Salvar</button>
       </td>
     </tr>
+  </tbody>
   </table>
+
 </ul>
 
 <div *ngIf="selectedGrao">
