@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Grao } from './grao';
+import { FormsModule } from '@angular/forms';
+import { GRAOS } from './mock-grao';
 
 @Component({
   selector: 'app-graos',
@@ -7,9 +10,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraosComponent implements OnInit {
 
-  constructor() { }
+  graos = GRAOS;
+
+  grao: Grao = {
+    id: 1,
+    name: 'Windstorm'
+  };
+
+  selectedGrao?: Grao;
+  onSelect(grao: Grao): void {
+    this.selectedGrao = grao;
+  }
+
+  
+  
+  htmlstring: string = '';
+  key: string = 'Graos';
+  myItem!: string | null;
+  storeGrao() {
+    localStorage.setItem(this.key, JSON.stringify(this.graos));
+    this.myItem = localStorage.getItem(this.key);
+    this.graos = JSON.parse(String(localStorage.getItem("Graos")));
+  }
+  SpecificDelete(grao: Grao) {
+    this.graos = this.graos.filter(h => h !== grao);
+    localStorage.setItem(this.key, JSON.stringify(this.graos));
+  }
+
+  deleteGraos() {
+    localStorage.clear();
+    this.myItem = '';
+    this.graos = JSON.parse(String(localStorage.getItem("Graos")));
+  }
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
+   
   }
 
 }
