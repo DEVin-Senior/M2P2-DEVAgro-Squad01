@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-fazendas',
@@ -8,9 +7,20 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class FazendasComponent implements OnInit {
 
+  constructor() { }
+  
   @Input() public titulo: string = "Fazendas"
 
+  listaFazenda: any = [];
+
   ngOnInit(): void {
+
+    this.listaFazenda = JSON.parse(String(localStorage.getItem("listaFazendas")));
+
   }
 
 }
+
+
+
+
