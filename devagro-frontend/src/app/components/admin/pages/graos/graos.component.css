@@ -270,3 +270,19 @@
 .graos .name {
   align-self: center;
 }
+
+table, th, td {
+  border: solid 1px #000;
+  padding: 10px;
+}
+
+table {
+    border-collapse:collapse;
+    caption-side:bottom;
+}
+
+caption {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+}

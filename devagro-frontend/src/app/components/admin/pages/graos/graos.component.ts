@@ -17,12 +17,10 @@ export class GraosComponent implements OnInit {
     this.selectedGrao = grao;
   }
 
-  htmlstring: string = '';
   key: any = 'listaGraos';
   myItem!: any | null;
   storeGrao() {
     localStorage.setItem(this.key, JSON.stringify(this.graos));
-    /* this.myItem = localStorage.getItem(this.key); */
     this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
   SpecificDelete(grao: Object) {
