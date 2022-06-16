@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fazendas',
@@ -9,6 +9,8 @@ export class FazendasComponent implements OnInit {
 
   constructor() { }
   
+  @Input() public titulo: string = "Fazendas"
+
   listaFazenda: any = [];
 
   ngOnInit(): void {

@@ -1,14 +1,10 @@
 <app-sidenav></app-sidenav>
 
-<app-template-body>
-
-  <h1>Fazendas</h1>
-
+<app-template-body [title]="titulo">
   <div class="fundo-tabela">
     <h2 class="titulo" style="text-align: center">Propriedades cadastradas</h2>
 
     <table class="table table-hover">
-
       <thead>
         <tr>
           <th scope="col">Nome da propriedade</th>
@@ -18,22 +14,22 @@
 
       <tbody class="table-group-divider">
         <tr *ngFor="let fazenda of listaFazenda">
-          <td>{{fazenda.nome}}</td>
-          <td>{{fazenda.ultima_colheita}}</td>
+          <td>{{ fazenda.nome }}</td>
+          <td>{{ fazenda.ultima_colheita }}</td>
         </tr>
       </tbody>
 
       <tfoot>
         <tr></tr>
       </tfoot>
-
-    </table> 
-
+    </table>
   </div>
 
   <div class="col text-center">
-    <p></p>
-    <a routerLink="/admin/fazendas/cadastro"><button type="button" class="btn btn-success btn-lg btn-block mx-auto">CADASTRAR NOVA FAZENDA</button></a>
+    <a routerLink="/admin/fazendas/cadastro"
+      ><button type="button" class="btn btn-success btn-lg btn-block mx-auto">
+        CADASTRAR NOVA FAZENDA
+      </button>
+    </a>
   </div>
-
 </app-template-body>

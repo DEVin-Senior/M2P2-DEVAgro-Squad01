@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class FazendaCadastroComponent implements OnInit {
 
   constructor(private router: Router){}
+
+  @Input() public titulo: string = "Cadastro de fazendas"
 
   ngOnInit(): void {
     this.listaFazendasArmazenamento = JSON.parse(String(localStorage.getItem("listaFazendas"))) || []
