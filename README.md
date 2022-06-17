@@ -40,6 +40,9 @@ Aplicativos e ferramentas que devem estar instalados e executando:
 
 https://www.figma.com/file/e1bWIIr30OjndaBWNiir4Y/Dev-agro?node-id=0%3A1.
 
+<<<<<<< HEAD
+## Monique
+=======
 ### 🔧 Download Projeto (Github)
 
 Em seu servidor local baixe o projeto usando o comando:
@@ -200,3 +203,4 @@ Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/f
 ## 🎁 Expressões de Gratidão
 
 Obrigado a todos que participaram e ajudaram esse projeto á ser desenvolvido.
+>>>>>>> main
