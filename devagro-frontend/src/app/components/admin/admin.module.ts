@@ -24,6 +24,7 @@ import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/faze
 import { GraoCadastroComponent } from './pages/grao-cadastro/grao-cadastro.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+import { PropriedadesCadastradasComponent } from './pages/fazendas/propriedades-cadastradas/propriedades-cadastradas.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     FazendaCadastroComponent,
     FuncionarioCadastroComponent,
     FuncionarioAlteraCadastroComponent,
-    GraoCadastroComponent
+    GraoCadastroComponent,
+    PropriedadesCadastradasComponent
 
   ],
   imports: [

@@ -1,30 +1,54 @@
 <app-sidenav></app-sidenav>
-<app-template-body>
+<app-template-body [title]="titulo">
 
   <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
       <tr>
-        <th>Detalhes dos funcionários</th>
-        <th>Fazenda Alocado</th>
-        <th>Função Principal</th>
-        <th>Ativo</th>
-        <th>Configurações</th>
+        <th class="th-detalhe">Detalhes dos funcionários</th>
+        <th class="th-vazio"></th>
+        <th class="th-fazenda">Fazenda Alocado</th>
+        <th class="th-funcao">Função Principal</th>
+        <th class="th-ativo">Ativo</th>
+        <th class="config">Configurações</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>
-        <h1 *ngFor="let nome of listNome">{{nome}}<p >xxxxx</p></h1>
-      </td>
-        <td>
-          <h1 class="h1-up"  *ngFor="let fazenda of listFazenda">{{fazenda}}</h1>
-          
-        </td>
-      <td >
-        <h1 *ngFor="let Funcao of listFuncao">{{Funcao}}
 
-        </h1>
-      </td>
-        
+     <tr>
+
+       <td class="td-detalhe">
+            <div *ngFor="let nome of listNome" style="text-align:center" class="div-detalhe">{{nome}}</div>
+        </td>
+
+
+
+    <td class="td-vazio">
+        <div *ngFor="let fazenda of listFazenda" style="text-align:center" class="div-fazenda"></div>
+    </td>
+
+      <td class="td-fazenda">
+        <div *ngFor="let fazenda of listFazenda" style="text-align:center" class="div-fazenda">{{fazenda}}</div>
+    </td>
+
+    <td class="td-funcao">
+      <div *ngFor="let funcao of listFuncao" style="text-align:center" class="div-funcao">{{funcao}}</div>
+    </td>
+
+    <td class="td-ativo">
+      <div *ngFor="let ativo of listAtivo" style="text-align:center" class="div-ativo">{{ativo}}</div>
+    </td>
+
+    <td class="td-config">
+      <div *ngFor="let ativo of listAtivo" style="text-align:center" class="div-config"></div>
+    </td>
+
+
+
+
+
+
+
+
 
        <!-- <td>
           <div class="d-flex align-items-center">
@@ -122,7 +146,18 @@
           </button>
         </td>-->
       </tr>
+      <!--<tr *ngFor="let nome of listNome">{{nome}}
+        <td ><h1 *ngFor="let fazenda of listFazenda">{{fazenda}}</h1></td>
+        <td>I'm your second cell.</td>
+        <td>I'm your third cell.</td>
+        <td>I'm your fourth cell.</td>
+      </tr>-->
     </tbody>
   </table>
+
+
+  <button type="button" class="button">
+    <span class="button__text">+</span>
+  </button>
 
 </app-template-body>
