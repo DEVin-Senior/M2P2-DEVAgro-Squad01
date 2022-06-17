@@ -1,4 +1,9 @@
+<<<<<<< Updated upstream
 import { Component, EventEmitter, OnInit } from '@angular/core';
+=======
+import { Component,Input, EventEmitter, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-grao-cadastro',
@@ -6,9 +11,19 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./grao-cadastro.component.css']
 })
 
+
+ 
 export class GraoCadastroComponent implements OnInit {
+<<<<<<< Updated upstream
+=======
+  
+  
+>>>>>>> Stashed changes
 
    constructor() { }
+
+   @Input() public titulo: string = "Cadastro Grãos"
+
 
   ngOnInit(): void {
     this.listaGraosArmazenamento = JSON.parse(String(localStorage.getItem("listaGraos"))) || []
@@ -16,6 +31,8 @@ export class GraoCadastroComponent implements OnInit {
      console.log(this.listaGraosArmazenamento)
   }
 
+
+  
 listaGraosArmazenamento :Array<Object>=[] 
 
 
@@ -26,7 +43,6 @@ grao_info:any = {
   fazenda: "",
   colheita: "",
   informacoes: "",
-  foto: "",
 }
 
 mudar_nome(nome:string):void{
@@ -74,4 +90,12 @@ click_cadastrar():void{
 pegar_grao(id:Number):any{
   return JSON.parse(String(localStorage.getItem("grao_" + String(id))))
 }
+<<<<<<< Updated upstream
+=======
+
+btnClick = () => {
+  
+  this.router.navigateByUrl('/admin/graos');
+};
+>>>>>>> Stashed changes
 }

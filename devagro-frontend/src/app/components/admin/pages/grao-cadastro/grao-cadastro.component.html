@@ -1,37 +1,32 @@
 <app-sidenav></app-sidenav>
 
-<app-template-body>
-
-    <h1>Cadastro Grãos</h1>
+<app-template-body [title]="titulo">
 
     <div class="borda">
       <br>  
       <h2 class="formulario">NOME</h2>
-      <input type="text" placeholder=" Nome" class="input" #NOME (keyup)=mudar_nome(NOME.value)>
+      <input type="text" placeholder=" Nome" class="input" #NOME (keyup)=mudar_nome(NOME.value)>>
   
       <br><br>
       <h2 class="formulario">Fazenda que Produz</h2>
-      <input type="text" placeholder=" seleciona a fazenda" class="input" #FAZENDA  (keyup)=mudar_fazenda(FAZENDA.value) >>
+      <input type="text" placeholder=" seleciona a fazenda" class="input" #FAZENDA (keyup)=mudar_fazenda(FAZENDA.value)>>
   
       <br><br>
       <h2 class="formulario">Previsão de Colheita</h2>
-      <input type="date" placeholder=" Previsão de Colheita" class="input" #colheita (keyup)=mudar_colheita(colheita.value)>> 
+      <input type="date" placeholder="Data dd/mm/aaaa" class="input" #colheita (keyup)=mudar_colheita(colheita.value)>> 
   
      <br><br>
       <h2 class="formulario">Informações adicionais</h2>
       <input type="text" placeholder=" Informações adicionais" class="input" #informacoes (keyup)=mudar_informacoes(informacoes.value)>>
- 
-      <p></p><br>
-      <h3>FOTO</h3>
-      
-      <button><input type="file" placeholder="Foto"></button>
-       
+      <br><br><br>
     </div>
 
     
     <div class="cadastrar">
     <br>
-  <button (click)=click_cadastrar()>cadastrar</button>
+ 
+    <button (click)=click_cadastrar()>cadastrar</button>
+  
 </div>
 
 
