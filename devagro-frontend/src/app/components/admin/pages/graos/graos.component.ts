@@ -15,9 +15,12 @@ export class GraosComponent implements OnInit {
   graos = GRAOS;
   graosObjetos :Array<Object>= [];
 
+  mostrar: boolean = false;
+
   selectedGrao?: Object;
   onSelect(grao: Object): void {
     this.selectedGrao = grao;
+    this.mostrar = true;
   }
 
   key: any = 'listaGraos';
@@ -25,16 +28,20 @@ export class GraosComponent implements OnInit {
   storeGrao() {
     localStorage.setItem(this.key, JSON.stringify(this.graosObjetos));
     this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    this.mostrar = false;
   }
+
   SpecificDelete(grao: Object) {
     this.graos = this.graosObjetos.filter(h => h !== grao);
     localStorage.setItem(this.key, JSON.stringify(this.graos));
     this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    this.mostrar = false;
   }
 
   deleteGraos() {
     localStorage.clear();
     this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    this.mostrar = false;
   }
 
   refreshPage() {
