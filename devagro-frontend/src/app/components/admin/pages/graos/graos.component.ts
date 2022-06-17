@@ -30,8 +30,6 @@ export class GraosComponent implements OnInit {
     this.graos = this.graosObjetos.filter(h => h !== grao);
     localStorage.setItem(this.key, JSON.stringify(this.graos));
     this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
-    /*this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
-    this.refreshPage(); */
   }
 
   deleteGraos() {
