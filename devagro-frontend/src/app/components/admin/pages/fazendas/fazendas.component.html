@@ -1,29 +1,8 @@
 <app-sidenav></app-sidenav>
 
 <app-template-body [title]="titulo">
-  <div class="fundo-tabela">
-    <h2 class="titulo" style="text-align: center">Propriedades cadastradas</h2>
 
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Nome da propriedade</th>
-          <th scope="col">Previsão de coleita</th>
-        </tr>
-      </thead>
-
-      <tbody class="table-group-divider">
-        <tr *ngFor="let fazenda of listaFazenda">
-          <td>{{ fazenda.nome }}</td>
-          <td>{{ fazenda.ultima_colheita }}</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr></tr>
-      </tfoot>
-    </table>
-  </div>
+  <app-propriedades-cadastradas></app-propriedades-cadastradas>
 
   <div class="col text-center">
     <a routerLink="/admin/fazendas/cadastro"
@@ -32,4 +11,5 @@
       </button>
     </a>
   </div>
+
 </app-template-body>
