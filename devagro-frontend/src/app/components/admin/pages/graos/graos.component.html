@@ -14,7 +14,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let grao of graos">
+    <tr *ngFor="let grao of graosObjetos">
+
       <td>
         <button class="grao-botao" [class.selected]="grao === selectedGrao" type="button" (click)="onSelect(grao)">
           <span class="badge">{{grao.id}}</span>
