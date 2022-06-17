@@ -1,4 +1,15 @@
 <app-sidenav></app-sidenav>
+
 <app-template-body [title]="titulo">
-  <a routerLink="/admin/fazendas/cadastro"><button class="btn btn-success pull-right" >Adicionar fazenda</button></a>
+
+  <app-propriedades-cadastradas></app-propriedades-cadastradas>
+
+  <div class="col text-center">
+    <a routerLink="/admin/fazendas/cadastro"
+      ><button type="button" class="btn btn-success btn-lg btn-block mx-auto">
+        CADASTRAR NOVA FAZENDA
+      </button>
+    </a>
+  </div>
+
 </app-template-body>

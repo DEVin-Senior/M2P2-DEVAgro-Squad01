@@ -10,7 +10,6 @@
 .info-to-side {
   display: flex;
   justify-content: space-between;
-
 }
 
 .info-to-side p {
@@ -29,14 +28,52 @@
   gap: 15px;
 }
 
+.menu-user {
+  font-size: 1em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: ease-out 0.5s;
+  cursor: pointer;
+}
+.menu-user li {
+  list-style: none;
+}
+.menu-user li a {
+  display: block;
+  text-decoration: none;
+}
+.menu-user ul {
+  list-style: none;
+}
+
+.menu-user ul li {
+  text-align: center;
+}
+
+.menu-user ul li:hover {
+  cursor: pointer;
+  color: var(--main-green-color);
+  font-weight: 700;
+}
+.menu-user ul {
+  display: none;
+}
+.menu-user li:hover > ul {
+  display: inline-block;
+}
+
 .body {
   width: calc(100% - 5rem);
-  height: 130vh;
+  height: 150vh;
   margin-left: 5rem;
   z-index: 0;
   position: relative;
   top: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   background: var(--main-grey-color);
   padding: 3rem;
 }

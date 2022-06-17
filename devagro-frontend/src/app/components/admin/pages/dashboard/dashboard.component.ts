@@ -23,11 +23,13 @@ export class DashboardComponent {
       return [
         { title: 'Card 1', cols: 2, rows: 1, content:'Teste Olá mundão' },
         { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
+        { title: 'Card 3', cols: 1, rows: 1, view3: true},
         { title: 'Card 4', cols: 1, rows: 1 }
       ];
     })
   );
+
+  qtdeFuncionarios = localStorage.getItem('quantidade_funcionarios');
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 }

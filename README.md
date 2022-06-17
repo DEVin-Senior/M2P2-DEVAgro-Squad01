@@ -1,6 +1,5 @@
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-
 # Projeto 2 Módulo 2 - DevinHouse
 
 Desenvolvido pela SQUAD 1 - Turma DevInHouse.
@@ -12,6 +11,12 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em sua m�
 O objetivo deste documento é facilitar a compreensão do escopo do projeto e de como funciona.
 
 Consulte **Implantação** para saber mais informações sobre implantar o projeto.
+
+## Comandos para Instalar dependências:
+- [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
+
+## Requisitos Funcionais:
+- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
 
 ### 📋 Requisitos Funcionais
 
@@ -172,7 +177,6 @@ Todos aqueles que ajudaram a levantar o projeto desde o seu início.
 * **Monique Aparecida Zanquet** - *Developer* - [Desenvolvedor] (https://github.com/mzanquet)
 
 * **Bruno Santana** - *Developer* - [Desenvolvedor] (https://github.com/ibrunoss) (Desistente)
-
 
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="squad.jpg" /></a></p>
 

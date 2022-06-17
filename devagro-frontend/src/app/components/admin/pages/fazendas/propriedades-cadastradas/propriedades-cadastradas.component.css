@@ -1,0 +1,51 @@
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+}
+  
+.button-dropdown {
+  background: var(--main-green-color);
+  font-size: 18px;
+  box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+  margin-bottom: 5px;
+}
+
+th {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 40px;
+  color: #252733;
+}
+  
+th:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 40px;
+  color: #252733;
+}
+  
+td {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 40px;
+  color: #0e1d8e;
+}
+  
+td:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 40px;
+  color: #0e1d8e;
+}
+  
+.fundo-tabela {
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid var(--main-green-color);
+  background: white;
+}

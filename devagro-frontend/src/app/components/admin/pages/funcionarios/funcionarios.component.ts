@@ -33,27 +33,30 @@ export class FuncionariosComponent implements OnInit {
       this.localStorageViewObject.forEach((element) => {
         console.log(element);
       });
+      this.localStorageView.forEach((element) => {
+        console.log(JSON.parse(String(element)));
+        this.localStorageViewObject.push(JSON.parse(String(element)));
+        console.log(this.localStorageViewObject);
+        console.log(element);
+        //console.log(element.isPrototypeOf)
+      });
+      this.localStorageViewObject.forEach((elemental) => {
+        Object.entries(elemental).forEach((element) => {});
+        console.log(Object.entries(elemental));
+      });
+      console.log(this.localStorageView);
+      console.log(this.localStorageView);
+
+      this.localStorageViewObject.forEach((elemental) => {
+        Object.entries(elemental).forEach((element) => {});
+        console.log(Object.entries(elemental));
+      });
+      this.addFuncionarios();
+      this.pegaFazenda();
+      this.pegaFuncao();
+      this.pegaAtividade();
+      //this.pegaFazenda()
     }
-    console.log(this.localStorageView);
-    console.log(this.localStorageView);
-
-    this.localStorageView.forEach((element) => {
-      console.log(JSON.parse(String(element)));
-      this.localStorageViewObject.push(JSON.parse(String(element)));
-      console.log(this.localStorageViewObject);
-      console.log(element);
-      //console.log(element.isPrototypeOf)
-    });
-
-    this.localStorageViewObject.forEach((elemental) => {
-      Object.entries(elemental).forEach((element) => {});
-      console.log(Object.entries(elemental));
-    });
-    this.addFuncionarios();
-    this.pegaFazenda();
-    this.pegaFuncao();
-    this.pegaAtividade();
-    //this.pegaFazenda()
   }
 
   pegaNome(): any {

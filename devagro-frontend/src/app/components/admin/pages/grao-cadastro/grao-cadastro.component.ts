@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-import { Component, EventEmitter, OnInit } from '@angular/core';
-=======
 import { Component,Input, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-grao-cadastro',
@@ -14,13 +10,11 @@ import { Router } from '@angular/router';
 
  
 export class GraoCadastroComponent implements OnInit {
-<<<<<<< Updated upstream
-=======
   
   
->>>>>>> Stashed changes
 
-   constructor() { }
+   constructor(private router: Router) { }
+
 
    @Input() public titulo: string = "Cadastro Grãos"
 
@@ -90,12 +84,9 @@ click_cadastrar():void{
 pegar_grao(id:Number):any{
   return JSON.parse(String(localStorage.getItem("grao_" + String(id))))
 }
-<<<<<<< Updated upstream
-=======
 
 btnClick = () => {
   
   this.router.navigateByUrl('/admin/graos');
 };
->>>>>>> Stashed changes
 }
