@@ -29,7 +29,7 @@ export class GraosComponent implements OnInit {
   SpecificDelete(grao: Object) {
     this.graos = this.graosObjetos.filter(h => h !== grao);
     localStorage.setItem(this.key, JSON.stringify(this.graos));
-    this.refreshPage();
+    this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
 
   deleteGraos() {
@@ -47,7 +47,11 @@ export class GraosComponent implements OnInit {
     localStorage.setItem(this.key, JSON.stringify(this.graos));
     if(this.graos != null){
       for(let i = 0; i < this.graos.length; i++){
-        this.graosObjetos.push(JSON.parse(String(this.graos[i])))
+        if(typeof (this.graos[i]) === 'string'){
+          this.graosObjetos.push(JSON.parse(String(this.graos[i])))
+        }else{
+          this.graosObjetos.push(this.graos[i]);
+        }
       }
     }
   }
