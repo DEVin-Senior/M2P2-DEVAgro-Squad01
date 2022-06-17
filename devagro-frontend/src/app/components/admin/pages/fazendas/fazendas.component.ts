@@ -11,11 +11,11 @@ export class FazendasComponent implements OnInit {
 
   @Input() public titulo: string = "Fazendas"
 
-  listaFazenda: any = [];
+  
 
   ngOnInit(): void {
 
-    this.listaFazenda = JSON.parse(String(localStorage.getItem("listaFazendas")));
+    
 
   }
 
