@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class FazendasComponent implements OnInit {
 
   constructor() { }
-  
+
   @Input() public titulo: string = "Fazendas"
 
   
