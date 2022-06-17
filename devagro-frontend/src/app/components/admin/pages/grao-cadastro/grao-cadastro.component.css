@@ -52,7 +52,12 @@ h3 {
 }
 
 .cadastrar{    
-    background-color: var(--grey-ligth);
+    background-color: var(--main-grey-color);
     width:1100px;
  }
 
+ input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  
