@@ -1,6 +1,5 @@
 <app-sidenav></app-sidenav>
-<app-template-body>
-  <h1>Fazendas</h1>
+<app-template-body [title]="titulo">
   <form>
     <div class="conteiner">
       <div class="form-group">
@@ -21,7 +20,7 @@
       </div>
     </div>
     <div class="col text-center">
-      <button type="submit" class="" (click)="onSubmit()">Cadastrar</button>
+      <button type="button" class="btn btn-success btn-lg btn-block mx-auto" (click)="onSubmit()">CADASTRAR NOVA FAZENDA</button>
     </div>
   </form>
 </app-template-body>

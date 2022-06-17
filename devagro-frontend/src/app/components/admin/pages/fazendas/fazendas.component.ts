@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fazendas',
@@ -8,7 +7,20 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class FazendasComponent implements OnInit {
 
+  constructor() { }
+  
+  @Input() public titulo: string = "Fazendas"
+
+  
+
   ngOnInit(): void {
+
+    
+
   }
 
 }
+
+
+
+
