@@ -1,7 +1,6 @@
 <app-sidenav></app-sidenav>
-<app-template-body>
-  <h1>Grãos</h1>
-  
+<app-template-body [title]="titulo">
+
   <button class="deletar-tudo" (click)="deleteGraos()">Deletar Tudo</button>
 <ul class="">
   <table class="graos">
@@ -15,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let grao of graos">
+    <tr *ngFor="let grao of graosObjetos">
       <td>
         <button class="grao-botao" [class.selected]="grao === selectedGrao" type="button" (click)="onSelect(grao)">
           <span class="badge">{{grao.id}}</span>
@@ -51,5 +50,5 @@
   <button (click)="btnClick()" type="button" class="button">
     <span class="button__text">+</span>
   </button>
-  
+
 </app-template-body>
