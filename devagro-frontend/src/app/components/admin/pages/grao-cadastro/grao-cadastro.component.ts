@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-grao-cadastro',
@@ -7,8 +8,9 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 })
 
 export class GraoCadastroComponent implements OnInit {
+  
 
-   constructor() { }
+   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.listaGraosArmazenamento = JSON.parse(String(localStorage.getItem("listaGraos"))) || []
@@ -69,9 +71,14 @@ click_cadastrar():void{
   localStorage.setItem("grao_" + String(id),grao_info_json)
 
   localStorage.setItem("quantidade_grao",String(id + 1))
+  this.btnClick();
 }
 
 pegar_grao(id:Number):any{
   return JSON.parse(String(localStorage.getItem("grao_" + String(id))))
 }
+
+btnClick = () => {
+  this.router.navigateByUrl('/admin/graos');
+};
 }

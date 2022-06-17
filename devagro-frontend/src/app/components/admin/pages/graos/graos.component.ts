@@ -13,6 +13,7 @@ export class GraosComponent implements OnInit {
   @Input() public titulo: string = "Grãos"
 
   graos = GRAOS;
+  graosObjetos :Array<Object>= [];
 
   selectedGrao?: Object;
   onSelect(grao: Object): void {
@@ -22,22 +23,33 @@ export class GraosComponent implements OnInit {
   key: any = 'listaGraos';
   myItem!: any | null;
   storeGrao() {
-    localStorage.setItem(this.key, JSON.stringify(this.graos));
-    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    localStorage.setItem(this.key, JSON.stringify(this.graosObjetos));
+    this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
   SpecificDelete(grao: Object) {
-    this.graos = this.graos.filter(h => h !== grao);
+    this.graos = this.graosObjetos.filter(h => h !== grao);
     localStorage.setItem(this.key, JSON.stringify(this.graos));
+    this.refreshPage();
   }
 
   deleteGraos() {
     localStorage.clear();
-    this.myItem = '';
-    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    this.graosObjetos = JSON.parse(String(localStorage.getItem("listaGraos")));
   }
+
+  refreshPage() {
+    window.location.reload();
+  }
+   
 
   constructor(private router: Router) {
     this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+    localStorage.setItem(this.key, JSON.stringify(this.graos));
+    if(this.graos != null){
+      for(let i = 0; i < this.graos.length; i++){
+        this.graosObjetos.push(JSON.parse(String(this.graos[i])))
+      }
+    }
   }
 
   btnClick = () => {
