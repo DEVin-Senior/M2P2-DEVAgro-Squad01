@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-fazendas',
@@ -8,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class FazendasComponent implements OnInit {
 
   constructor() { }
+  
+  @Input() public titulo: string = "Fazendas"
+
+  listaFazenda: any = [];
 
   ngOnInit(): void {
+
+    this.listaFazenda = JSON.parse(String(localStorage.getItem("listaFazendas")));
+
   }
 
 }
+
+
+
+

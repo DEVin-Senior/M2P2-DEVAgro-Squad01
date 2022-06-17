@@ -34,6 +34,8 @@ const routes: Routes = [
     path: '/graos',
     component: GraosComponent,
   },
+  
+  
 ];
 
 @NgModule({

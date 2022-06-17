@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 // Rotas
 import { AdminRoutingModule } from './admin-routing.module';
@@ -11,6 +12,7 @@ import { FazendasComponent } from './pages/fazendas/fazendas.component';
 import { GraosComponent } from './pages/graos/graos.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { TemplateBodyComponent } from '../template-body/template-body.component';
+
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -19,9 +21,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FazendaCadastroComponent } from './pages/fazendas/fazenda-cadastro/fazenda-cadastro.component';
-import { GraosCadastroComponent } from './pages/graos/graos-cadastro/graos-cadastro.component';
+import { GraoCadastroComponent } from './pages/grao-cadastro/grao-cadastro.component';
 import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-cadastro/funcionario-cadastro.component';
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
+
 
 @NgModule({
   declarations: [
@@ -33,9 +36,10 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     TemplateBodyComponent,
     DashboardComponent,
     FazendaCadastroComponent,
-    GraosCadastroComponent,
     FuncionarioCadastroComponent,
-    FuncionarioAlteraCadastroComponent
+    FuncionarioAlteraCadastroComponent,
+    GraoCadastroComponent
+
   ],
   imports: [
     CommonModule,
@@ -45,7 +49,9 @@ import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcion
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    FormsModule
+    
   ]
 })
 export class AdminModule { }

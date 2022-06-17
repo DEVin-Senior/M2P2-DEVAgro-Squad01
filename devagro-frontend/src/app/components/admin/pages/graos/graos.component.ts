@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Object } from './grao';
+import { GRAOS } from './mock-grao';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-graos',
@@ -7,9 +10,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraosComponent implements OnInit {
 
-  constructor() { }
+  @Input() public titulo: string = "Grãos"
+
+  graos = GRAOS;
+
+  selectedGrao?: Object;
+  onSelect(grao: Object): void {
+    this.selectedGrao = grao;
+  }
+
+  key: any = 'listaGraos';
+  myItem!: any | null;
+  storeGrao() {
+    localStorage.setItem(this.key, JSON.stringify(this.graos));
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+  }
+  SpecificDelete(grao: Object) {
+    this.graos = this.graos.filter(h => h !== grao);
+    localStorage.setItem(this.key, JSON.stringify(this.graos));
+  }
+
+  deleteGraos() {
+    localStorage.clear();
+    this.myItem = '';
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+  }
+
+  constructor(private router: Router) {
+    this.graos = JSON.parse(String(localStorage.getItem("listaGraos")));
+  }
+
+  btnClick = () => {
+    this.router.navigateByUrl('/admin/grao-cadastro');
+  };
 
   ngOnInit(): void {
+
   }
 
 }
