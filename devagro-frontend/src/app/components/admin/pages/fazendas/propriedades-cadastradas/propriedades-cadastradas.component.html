@@ -1,6 +1,21 @@
 <div class="fundo-tabela">
     <h2 class="titulo" style="text-align: center">Propriedades cadastradas</h2>
 
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle button-dropdown float-end" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Organizar por
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><h6 class="dropdown-header">Nome da fazenda</h6></li>
+        <li><a class="dropdown-item" (click)="nomeCrescente()">Nome da fazenda em ordem crescente</a></li>
+        <li><a class="dropdown-item" (click)="nomeDecrescente()">Nome da fazenda em ordem decrescente</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><h6 class="dropdown-header">Data da colheita</h6></li>
+        <li><a class="dropdown-item" (click)="colheitaCrescente()">Data da colheita em ordem crescente</a></li>
+        <li><a class="dropdown-item" (click)="colheitaDecrescente()">Data da colheita em ordem decrescente</a></li>
+      </ul>
+    </div>
+
     <table class="table table-hover">
       <thead>
         <tr>
@@ -10,7 +25,7 @@
       </thead>
 
       <tbody class="table-group-divider">
-        <tr *ngFor="let fazenda of listaFazenda">
+        <tr *ngFor="let fazenda of listaFazenda; let i = index">
           <td>{{ fazenda.nome }}</td>
           <td>{{ fazenda.ultima_colheita }}</td>
         </tr>
