@@ -1,4 +1,4 @@
-import { Component,Input, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
  
 export class GraoCadastroComponent implements OnInit {
   
-  
+  @Input() public titulo: string = "Cadastro de Grãos"
 
    constructor(private router: Router) { }
 
