@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
  
 export class GraoCadastroComponent implements OnInit {
   
-  @Input() public titulo: string = "Cadastro de Grãos"
 
    constructor(private router: Router) { }
 
@@ -59,12 +58,15 @@ mudar_informacoes(informacoes:string):void{
 
 click_cadastrar():void{
   let id = Number(localStorage.getItem("quantidade_grao"))
+  
   if(id == null){
     this.grao_info.id = 0
   }
   else{
     this.grao_info.id = id
-  }
+  } 
+
+
   //Grão
   let grao_info_json: string = JSON.stringify(this.grao_info)
 
