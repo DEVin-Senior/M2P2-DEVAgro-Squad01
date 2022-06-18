@@ -46,6 +46,7 @@
           <th scope="col">Id</th>
           <th scope="col">Nome</th>
           <th scope="col">Fazenda</th>
+          <th scope="col">Colheita</th>
           <th scope="col">Salvar</th>
         </tr>
       </thead>
@@ -60,6 +61,9 @@
           </td>
           <td>
             <input id="grao-fazenda" [(ngModel)]="selectedGrao.fazenda" placeholder="fazenda">
+          </td>
+          <td>
+            <input id="grao-colheita" type="date" [(ngModel)]="selectedGrao.colheita" placeholder="Data dd/mm/aaaa">
           </td>
           <td>
             <button class="delete-grao" (click)="storeGrao()">Salvar</button>
