@@ -1,4 +1,4 @@
-import { Component,Input, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,17 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./grao-cadastro.component.css']
 })
 
-
- 
 export class GraoCadastroComponent implements OnInit {
   
-  
+  @Input() public titulo: string = "Cadastro de Grãos"
 
    constructor(private router: Router) { }
-
-
-   @Input() public titulo: string = "Cadastro Grãos"
-
 
   ngOnInit(): void {
     this.listaGraosArmazenamento = JSON.parse(String(localStorage.getItem("listaGraos"))) || []
@@ -25,8 +19,6 @@ export class GraoCadastroComponent implements OnInit {
      console.log(this.listaGraosArmazenamento)
   }
 
-
-  
 listaGraosArmazenamento :Array<Object>=[] 
 
 
@@ -37,6 +29,7 @@ grao_info:any = {
   fazenda: "",
   colheita: "",
   informacoes: "",
+  foto: "",
 }
 
 mudar_nome(nome:string):void{
@@ -79,6 +72,7 @@ click_cadastrar():void{
   localStorage.setItem("grao_" + String(id),grao_info_json)
 
   localStorage.setItem("quantidade_grao",String(id + 1))
+  this.btnClick();
 }
 
 pegar_grao(id:Number):any{
@@ -86,7 +80,6 @@ pegar_grao(id:Number):any{
 }
 
 btnClick = () => {
-  
   this.router.navigateByUrl('/admin/graos');
 };
 }
