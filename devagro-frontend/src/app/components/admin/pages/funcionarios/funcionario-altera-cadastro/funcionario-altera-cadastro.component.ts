@@ -183,9 +183,11 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     let valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
     let valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
     
+
     let inputNome = valorNome.value
     let inputFazenda = valorFazenda.value
     let inputFuncao = valorFuncao.value
+    let atividade = this.setaAtividade()
 
     this.funcionario_atualizado.nome=this.nome
     this.funcionario_atualizado.fazenda=inputFazenda
@@ -193,7 +195,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     this.funcionario_atualizado.telefone=this.telefone
     this.funcionario_atualizado.id=this.id
     this.funcionario_atualizado.CPF=this.CPF
-    this.funcionario_atualizado.ativo=this.ativo
+    this.funcionario_atualizado.ativo=atividade
 
 
 
@@ -229,6 +231,19 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     localStorage.setItem('listaFuncionarios',String(JSON.stringify(this.listLocalStorage)))
   }
 
-  
+  setaAtividade(){
+    var check = document.querySelector('#check') as HTMLInputElement
+    var checkNo= document.querySelector('#check-no') as HTMLInputElement
+    
+    if(checkNo.checked==true){
+      this.ativo=false;
+      return false
+    }if(check.checked==true){return true}else{
+      return false
+    }
+   
+    
+   
 
+}
 }

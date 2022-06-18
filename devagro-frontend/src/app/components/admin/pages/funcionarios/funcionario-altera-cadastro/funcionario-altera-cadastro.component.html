@@ -4,22 +4,28 @@
 
     <div class="form-group">
         <label for="exampleInputPassword1">Nome</label>
-        <input  class="form-control" id="input-nome" placeholder="Nome" >
+        <input  class="form-control" id="input-nome" placeholder="Nome" required >
       </div>
 
       <div class="form-group">
         <label for="exampleInputPassword1">Fazenda</label>
-        <input  class="form-control" id="input-fazenda" placeholder="Fazenda">
+        <input  class="form-control" id="input-fazenda" placeholder="Fazenda" required>
       </div>
 
       <div class="form-group">
         <label for="exampleInputPassword1">Função principal</label>
-        <input  class="form-control" id="input-funcaoPrincipal" placeholder="Função Principal">
+        <input  class="form-control" id="input-funcaoPrincipal" placeholder="Função Principal" required>
       </div>
 
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <input type="checkbox" class="form-check-input" id="check" >
         <label class="form-check-label" for="exampleCheck1">ATIVO</label>
+        
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="check-no" >
+        <label class="form-check-label" for="exampleCheck1">Não ATIVO</label>
+        
       </div>
 
       <button (click)="alteraInfo()" routerLink="/admin/funcionarios/">Alterar informações</button>
