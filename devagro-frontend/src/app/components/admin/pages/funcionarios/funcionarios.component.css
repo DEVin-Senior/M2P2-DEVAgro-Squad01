@@ -123,35 +123,66 @@ margin-top: 20px;
 margin-bottom: 40px;
 }
 td{
-border: 1px solid black;
+border: 1px solid #05742E;
 }
 tr{
-border: 1px solid black;
+border: 1px solid #05742E;
 }
-h1{border: 1px solid black;}
+h1{border: 1px solid #05742E;}
 tr{display: flex;}
-th{border: 1px solid black;}
-.th-detalhe,.th-fazenda{width: 22%;
+th{border: 2px solid #05742E;}
+.th-detalhe,.th-fazenda{width: 28%;
                         text-align: center;}
-.td-detalhe,.td-fazenda{width: 22%;}
-.th-funcao{width: 15%;
+.td-detalhe,.td-fazenda{width: 28%;}
+.th-funcao{width: 28%;
 text-align: center;}
-.td-funcao{width: 15%;}
+.td-funcao{width: 28%;}
 .th-ativo{width:10%;
 text-align: center;}
 .td-ativo{width:10%}
-.config{width: 5%;}
-.td-config{width: 5%;}
-.div-detalhe{margin-bottom: 50px;
-            margin-top: 20px;}
+.config{width: 0%;}
+.td-config{width: 0%;}
+.div-detalhe{
+  margin-bottom: 50px;
+            margin-top: 20px;
+          box-shadow:10px 5px 5px #05742E;
+          border-radius:  10%;}
 .div-fazenda, .div-funcao, .div-ativo{
 margin-bottom: 50px;
 margin-top: 20px;
+box-shadow:10px 5px 5px #05742E;
+border-radius:  10%;
 }
-.th-vazio{width:26%;}
-.td-vazio{width:26%;}
+.div-ativo{margin-bottom: 57px;}
+.th-vazio{width:6%;}
+.td-vazio{width:6%;}
 i{width: 50px;
 height: 50px;}
+.div-detalhe,.div-fazenda,.div-funcao,.div-ativo{
+  border-bottom: 1px solid #05742e ;
+}
+
+.div-fazenda, .div-funcao, .div-ativo,.div-detalhe{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
+  
+
+  border: 13px 13px 13px 13px solid #05742e;
+}
+td{background-color: rgb(234, 243, 234);}
+th{background-color: rgb(234, 243, 234);
+font-size: x-large;}
+.div-button{display: flex;
+justify-content: space-between;}
+.button_text_alterar{font-size: medium;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 500;}
+
+  
+
+
+
 
 
 .button {
@@ -213,4 +244,9 @@ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 .button-edit:hover {
 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#button-altera{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
