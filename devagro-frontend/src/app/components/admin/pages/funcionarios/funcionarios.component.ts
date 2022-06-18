@@ -130,7 +130,7 @@ export class FuncionariosComponent implements OnInit {
         if(element[0]=="ativo"){
           console.log(element[1])
           this.ativo=element[1]
-          if(this.ativo=="")
+          
           if(this.ativo==""){this.ativo="não"}else{
             this.ativo="sim"
           }
