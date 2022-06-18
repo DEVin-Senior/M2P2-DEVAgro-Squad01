@@ -14,7 +14,7 @@ export class FuncionariosComponent implements OnInit {
   CPF: string = '';
   telefone: string = '';
   funcao_principila: string = '';
-  ativo: boolean = true;
+  ativo: string = "";
 
   constructor() {}
 
@@ -129,7 +129,11 @@ export class FuncionariosComponent implements OnInit {
       Object.entries(elemental).forEach(element=>{
         if(element[0]=="ativo"){
           console.log(element[1])
+          
           this.ativo=element[1]
+          if(this.ativo==""){this.ativo="não"}else{
+            this.ativo="sim"
+          }
           console.log(this.ativo)
           this.listAtivo.push(this.ativo)
           console.log(this.listAtivo)

@@ -14,6 +14,7 @@ export class FuncionarioCadastroComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
     ///preenche a lista  com os objetos armazenado no localStorage sempre que a tela inicia
     
     this.listaFuncionariosArmazenamento = JSON.parse(String(localStorage.getItem("listaFuncionarios"))) || []
@@ -60,6 +61,8 @@ export class FuncionarioCadastroComponent implements OnInit {
     this.funcionario_info.funcao_princila = funcao_princila
 
   }
+
+ 
 
   mudar_ativo(ativo:boolean):void{
     this.funcionario_info.ativo = ativo
