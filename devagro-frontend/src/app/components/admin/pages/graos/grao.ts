@@ -4,5 +4,4 @@ export interface Object {
     fazenda: string;
     colheita: string;
     informacao: string;
-    foto: string;
   }

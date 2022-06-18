@@ -71,15 +71,6 @@
         </tr>
       </tfoot>
     </table>
-    <!-- <div>
-      <label for="grao-name">Nome: </label>
-      <input id="grao-name" [(ngModel)]="selectedGrao.nome" placeholder="name">
-    </div>
-    <div>
-      <label for="grao-fazenda">Fazenda: </label>
-      <input id="grao-fazenda" [(ngModel)]="selectedGrao.fazenda" placeholder="fazenda">
-    </div>
-      <button class="delete-grao" (click)="storeGrao()">Salvar</button> -->
   </div>
   
   <button (click)="btnClick()" type="button" class="button">
@@ -88,61 +79,4 @@
   <button (click)="deleteGraos()" type="button" class="button-deletatudo">
     <span class="button__text">Deletar Todos</span>
   </button>
-
-  <!-- <body>
-  <button class="deletar-tudo" (click)="deleteGraos()">Deletar Tudo</button>
-<ul class="">
-  <table class="graos">
-    <thead>
-    <tr>
-      <th>Grão</th>
-      <th>Fazenda</th>
-      <th>Colheita</th>
-      <th>Editar/Deletar</th>
-      <th>Salvar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let grao of graosObjetos">
-
-      <td>
-        <button class="grao-botao" [class.selected]="grao === selectedGrao" type="button" (click)="onSelect(grao)">
-          <span class="badge">{{grao.id}}</span>
-          <span class="name">{{grao.nome}}</span>
-        </button>
-      </td>
-      <td >
-        <span class="fazenda-tabela">{{grao.fazenda}}</span>
-      </td>
-      <td >
-        <span class="colheita-tabela">{{grao.colheita}}</span>
-      </td>
-      <td>
-        <button class="delete-grao" (click)="SpecificDelete(grao)">Delete</button>
-      </td>
-      <td>
-        <button class="delete-grao" (click)="storeGrao()">Salvar</button>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-
-</ul>
-
-<div *ngIf="selectedGrao">
-  <h2>{{selectedGrao.nome | uppercase}} Details</h2>
-  <div>id: {{selectedGrao.id}}</div>
-  <div>
-    <label for="grao-name">Grão name: </label>
-    <input id="grao-name" [(ngModel)]="selectedGrao.nome" placeholder="name">
-  </div>
-  <div>
-    <label for="grao-fazenda">Fazenda: </label>
-    <input id="grao-fazenda" [(ngModel)]="selectedGrao.fazenda" placeholder="fazenda">
-  </div>
-</div>
-  <button (click)="btnClick()" type="button" class="button">
-    <span class="button__text">+</span>
-  </button>
-</body> -->
 </app-template-body>
