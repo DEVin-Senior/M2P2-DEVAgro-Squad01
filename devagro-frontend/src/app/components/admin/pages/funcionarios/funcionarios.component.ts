@@ -1,5 +1,6 @@
 import { Component, OnInit, TRANSLATIONS } from '@angular/core';
 
+
 @Component({
   selector: 'app-funcionarios',
   templateUrl: './funcionarios.component.html',
@@ -25,6 +26,7 @@ export class FuncionariosComponent implements OnInit {
   listFazenda:Array<any>=[]
   listFuncao:Array<any>=[]
   listAtivo:Array<any>=[]
+  buttonList:Array<any>=[]
   
 
   ngOnInit(): void {
@@ -62,6 +64,7 @@ export class FuncionariosComponent implements OnInit {
     this.pegaFuncao()
     this.pegaAtividade()
     //this.pegaFazenda()
+    this.pegaConfigButton()
 
 
 
@@ -249,8 +252,25 @@ export class FuncionariosComponent implements OnInit {
      });
   }
 
-  addProduct2(){
-     
+  pegaConfigButton(){
+    var button = document.createElement("button") as HTMLButtonElement
+    //button.innerText="Editar"
+    //button.classList.add("bi-filter-circle")
+    for (let index = 0; index < this.listNome.length; index++) {
+      var divButton = document.querySelector(".td-config")
+      divButton?.appendChild(button);
+      this.buttonList.push(divButton?.appendChild(button));
+      
+    }
+      this.buttonList.forEach( element=> {
+        var divButton = document.querySelector(".td-config")
+      divButton?.appendChild(element);
+
+      
+    });
+    console.log(this.buttonList)
 
 }
 }
+
+

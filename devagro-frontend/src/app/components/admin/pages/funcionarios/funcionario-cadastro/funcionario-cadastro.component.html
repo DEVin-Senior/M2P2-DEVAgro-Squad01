@@ -7,23 +7,23 @@
 
     <p></p>
     <h2 class="descricao">NOME</h2>
-    <input type="text" placeholder="Nome" class="entrada_texto" #NOME (keyup)=mudar_nome(NOME.value) >
+    <input type="text" placeholder="Nome" class="entrada_texto" #NOME (keyup)=mudar_nome(NOME.value) required >
 
     <p></p>
     <h2 class="descricao">FAZENDA</h2>
-    <input type="text" placeholder="seleciona a fazenda" class="entrada_texto" #FAZENDA  (keyup)=mudar_fazenda(FAZENDA.value) >
+    <input type="text" placeholder="seleciona a fazenda" class="entrada_texto" #FAZENDA  (keyup)=mudar_fazenda(FAZENDA.value) required >
 
     <p></p>
     <h2 class="descricao">CPF</h2>
-    <input type="number" placeholder="CPF" class="entrada_texto" #CPF (keyup)=mudar_CPF(CPF.value)>
+    <input type="number" placeholder="CPF" class="entrada_texto" #CPF (keyup)=mudar_CPF(CPF.value) required>
 
     <p></p>
     <h2 class="descricao">TELEFONE</h2>
-    <input type="number" placeholder="Telefone" class="entrada_texto" #TELEFONE (keyup)=mudar_telefone(TELEFONE.value)>
+    <input type="number" placeholder="Telefone" class="entrada_texto" #TELEFONE (keyup)=mudar_telefone(TELEFONE.value) required>
     
     <p></p>
     <h2 class="descricao">FUNÇÃO PRINCIPAL</h2>
-    <input type="Função principal"  placeholder="Função principal" class="entrada_texto" #FUNCAO_PRINCIPAL (keyup)=mudar_funcao_princila(FUNCAO_PRINCIPAL.value) > 
+    <input type="Função principal"  placeholder="Função principal" class="entrada_texto" #FUNCAO_PRINCIPAL (keyup)=mudar_funcao_princila(FUNCAO_PRINCIPAL.value) required > 
 
     <p></p>
     <h2 class="descricao">ATIVO</h2>
@@ -35,6 +35,6 @@
     <p></p>
   </div>
 
-  <button (click)=apertar_cadastrar()>cadastrar</button>
+  <button (click)=apertar_cadastrar()  routerLink="/admin/funcionarios/">cadastrar</button>
 
 </app-template-body>

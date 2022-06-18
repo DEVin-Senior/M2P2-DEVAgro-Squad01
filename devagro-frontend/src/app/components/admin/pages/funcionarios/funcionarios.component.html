@@ -9,7 +9,7 @@
         <th class="th-fazenda">Fazenda Alocado</th>
         <th class="th-funcao">Função Principal</th>
         <th class="th-ativo">Ativo</th>
-        <th class="config">Configurações</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
       
 
     <td class="td-vazio">
-        <div *ngFor="let fazenda of listFazenda" style="text-align:center" class="div-fazenda"></div>
+        <div *ngFor="let fazenda of listFazenda" style="text-align:center" class="div-vazio"></div>
     </td>
 
       <td class="td-fazenda">
@@ -38,9 +38,7 @@
       <div *ngFor="let ativo of listAtivo" style="text-align:center" class="div-ativo">{{ativo}}</div>
     </td>
 
-    <td class="td-config">
-      <div *ngFor="let ativo of listAtivo" style="text-align:center" class="div-config"></div>
-    </td>
+    
 
       
       
@@ -155,9 +153,13 @@
     </tbody>
   </table>
 
-  
-  <button type="button" class="button">
+  <div class="div-button">
+  <button type="button" class="button" routerLink="/admin/funcionarios/cadastro" >
     <span class="button__text">+</span>
   </button>
+  <button type="button" class="button" id="button-altera" routerLink="/admin/funcionarios/cadastro/alterar" >
+    <span class="button_text_alterar" >Alterar Informações</span>
+  </button>
+  </div>
 
 </app-template-body>
