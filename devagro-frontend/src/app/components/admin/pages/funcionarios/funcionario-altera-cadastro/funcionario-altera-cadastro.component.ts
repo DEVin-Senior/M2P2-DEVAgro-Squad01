@@ -54,6 +54,11 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
 
   listLocalStorage:Array<String> = Object(JSON.parse( String(localStorage.getItem("listaFuncionarios"))))
   listaLocalStorageObject :Array<Object> = []
+  listaAtualizadaComObjetoStringficado:string=""
+  listaString:Array<string>=[]
+  valorNome = document.querySelector("#input-nome") as HTMLInputElement
+  valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
+  valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
   
 
   alteraInfo(){ 
@@ -62,28 +67,25 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     let valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
     let valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
     
-    let inputNome = valorNome.value
-    let inputFazenda = valorFazenda.value
-    let inputFuncao = valorFuncao.value
-
     
     this.funcionarioInfo.nome =valorNome.value
     this.funcionarioInfo.fazenda=valorFazenda.value
     this.funcionarioInfo.funcaoPrincipal=valorFuncao.value
+    console.log(this.funcionarioInfo.nome)
+    console.log(this.funcionarioInfo.fazenda)
+    console.log(this.funcionarioInfo.funcaoPrincipal)
 
 
     
     
 
-    this.encontraFuncionairo(this.funcionarioInfo.nome,this.listaLocalStorageObject,this.funcionarioInfo.fazenda)
-    this.cortaObj()
-    this.sertaFuncionarioAtualizado()
-
-
-    console.log(this.listLocalStorage)
-    console.log(this.funcionarioInfo)
+    this.encontraFuncionairo(this.funcionarioInfo.nome,this.listaLocalStorageObject,this.funcionarioInfo.fazenda,this.funcionarioInfo.funcaoPrincipal)
+    this.encontraEDeleta(this.funcionarioInfo.nome,this.listaLocalStorageObject)
+    this.setaNovoObj(this.listaLocalStorageObject)
+    this.stringficaLsita(this.listaLocalStorageObject)
+    this.setaLocalStorage()
   }
-  encontraFuncionairo(nome:string,list:Array<Object>,fazenda:string){
+  encontraFuncionairo(nome:string,list:Array<Object>,fazenda:string,funcao:string){
    // list.find(Element.arguments=="nome")
     list.forEach(elemental => {
       //this.constroiLsitaObjeto()
@@ -91,6 +93,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
         if(element[1]==nome){
           console.log(elemental)
           Object.entries(elemental).forEach(element => {
+            
             if(element[0]=="CPF"){
               console.log(element[1])
               this.CPF=element[1]
@@ -101,7 +104,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
               
               
               console.log(element[1])
-              this.ativo=element[1]
+              this.ativo=this.setaAtividade()
               console.log(this.ativo)
             }
             if(element[0]=="telefone"){
@@ -116,7 +119,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
             }
             if(element[0]=="funcao_princila"){
               console.log(element[1])
-              this.funcaoPrincipal=element[1]
+              this.funcaoPrincipal=this.funcionarioInfo.funcaoPrincipal
               console.log(this.funcaoPrincipal)
             }
             if(element[0]=="nome"){
@@ -126,12 +129,15 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
             }
             if(element[0]=="fazenda"){
               console.log(element[1])
-              this.fazenda=element[1]
+              this.fazenda=this.funcionarioInfo.fazenda
               console.log(this.fazenda)
             }
             
             
          });}
+
+         
+         
          
          
             
@@ -147,8 +153,50 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
 
   }
 
-  
+  encontraEDeleta(nome:string,list:Array<Object>){
+    console.log(list)
+    // list.find(Element.arguments=="nome")
+     list.forEach(elemental => {
+       //this.constroiLsitaObjeto()
+       Object.entries(elemental).forEach(element=>{
+         if(element[1]==nome){
+           list.splice(this.id,1)
+           console.log(list)
+           
+             
+          }})});
+        }
 
+
+    setaNovoObj(list:Array<Object>){
+      this.funcionario_atualizado.CPF=this.CPF
+    this.funcionario_atualizado.ativo=this.ativo
+    this.funcionario_atualizado.fazenda=this.fazenda
+    this.funcionario_atualizado.funcao_princila=this.funcaoPrincipal
+    this.funcionario_atualizado.id=this.id
+    this.funcionario_atualizado.nome=this.nome
+    this.funcionario_atualizado.telefone=this.telefone
+      console.log(list)
+    list.splice(this.funcionario_atualizado.id,0,this.funcionario_atualizado)
+    console.log(this.funcionario_atualizado)
+    console.log(list);
+    
+
+    }
+
+    stringficaLsita(list:Array<Object>){
+       list.forEach(element => {
+        var elementString = JSON.stringify(element)
+        this.listaString.push(elementString)
+        
+       });
+      console.log(this.listaString)
+    }
+    setaLocalStorage(){
+      localStorage.setItem('listaFuncionarios',JSON.stringify(this.listaString))
+    }
+
+  
   constroiLsitaObjeto(){
     this.listLocalStorage.forEach(element => {
       console.log(JSON.parse(String(element)))
@@ -160,74 +208,22 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
      });
   }
 
-  setaObj(){
-    this.funcionario_info.CPF=this.CPF
-    this.funcionario_info.ativo=this.ativo
-    this.funcionario_info.fazenda=this.fazenda
-    this.funcionario_info.funcao_princila=this.funcaoPrincipal
-    this.funcionario_info.id=this.id
-    this.funcionario_info.nome=this.nome
-    this.funcionario_info.telefone=this.telefone
 
-
-    this.listaLocalStorageObject.splice(this.id,1)
-    console.log(this.listaLocalStorageObject)
-   let objectStringfado=JSON.stringify(this.funcionario_info)
-   console.log(objectStringfado)
-   return objectStringfado;
-
-  }
-
-  sertaFuncionarioAtualizado(){
-    let valorNome = document.querySelector("#input-nome") as HTMLInputElement
-    let valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
-    let valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
+  setaAtividade(){
+    var check = document.querySelector('#check') as HTMLInputElement
+    var checkNo= document.querySelector('#check-no') as HTMLInputElement
     
-    let inputNome = valorNome.value
-    let inputFazenda = valorFazenda.value
-    let inputFuncao = valorFuncao.value
-
-    this.funcionario_atualizado.nome=this.nome
-    this.funcionario_atualizado.fazenda=inputFazenda
-    this.funcionario_atualizado.funcao_princila=inputFuncao
-    this.funcionario_atualizado.telefone=this.telefone
-    this.funcionario_atualizado.id=this.id
-    this.funcionario_atualizado.CPF=this.CPF
-    this.funcionario_atualizado.ativo=this.ativo
-
-
-
-   this.listaLocalStorageObject.push(this.funcionario_atualizado)
-   console.log(this.listaLocalStorageObject);
-
-   this.StringficaLsitaAtualizada()
+    if(checkNo.checked==true){
+      this.ativo=false;
+      return false
+    }if(check.checked==true){return true}else{
+      return false
+    }
+   
+    
    
 
-    
-  
-
-  }
-  cortaObj(){
-    this.listLocalStorage.forEach(element => {
-      
-    });
-  this.listLocalStorage.splice(this.listLocalStorage.indexOf(this.setaObj()),1)
-            console.log(this.listLocalStorage)
-            console.log(this.listaLocalStorageObject)}
-
-
-  StringficaLsitaAtualizada(){
-    this.listLocalStorage.splice(0,this.listLocalStorage.length)
-    console.log(this.listLocalStorage)
-    this.listaLocalStorageObject.forEach(element=>{
-      var elementoString = JSON.stringify(element)
-      this.listLocalStorage.push(elementoString)
-
-
-    })
-    console.log(this.listLocalStorage)
-    localStorage.setItem('listaFuncionarios',String(JSON.stringify(this.listLocalStorage)))
-  }
+}
 
   
 
