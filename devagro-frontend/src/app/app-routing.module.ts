@@ -7,7 +7,7 @@ import { FuncionarioCadastroComponent } from './components/admin/pages/funcionar
 import { FuncionariosComponent } from './components/admin/pages/funcionarios/funcionarios.component';
 import { GraosComponent } from './components/admin/pages/graos/graos.component';
 import { GraoCadastroComponent } from './components/admin/pages/grao-cadastro/grao-cadastro.component';
-
+import { EmpresaCadastroComponent } from './components/admin/pages/empresa-cadastro/empresa-cadastro.component';
 
 const routes: Routes = [
   {
@@ -47,6 +47,10 @@ const routes: Routes = [
   {
     path: "admin/grao-cadastro",
     component: GraoCadastroComponent
+  },
+  {
+    path: "admin/empresa-cadastro",
+    component: EmpresaCadastroComponent
   }
 ];
 
