@@ -57,7 +57,7 @@ mudar_informacoes(informacoes:string):void{
 //Função cadastrar 
 
 click_cadastrar():void{
-  let id = Number(localStorage.getItem("quantidade_grao"))
+  let id = Number(localStorage.getItem("quantidade_grao")) + 1
   
   if(id == null){
     this.grao_info.id = 0
@@ -80,7 +80,7 @@ click_cadastrar():void{
   ///Cria LocalStorage e o grão referenciados
   localStorage.setItem("grao_" + String(id),grao_info_json)
 
-  localStorage.setItem("quantidade_grao",String(id + 1))
+  localStorage.setItem("quantidade_grao",String(id))
 }
 
 pegar_grao(id:Number):any{
