@@ -184,3 +184,15 @@ td:nth-child(2) {
   height: 2.8em;
   width: 6em;
 }
+.novo {
+  position: absolute;
+  right: 20vh;
+}
+
+.fundo-cadastrar {
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid var(--main-green-color);
+  background: white;
+  }
