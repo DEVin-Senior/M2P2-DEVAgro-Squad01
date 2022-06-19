@@ -1,12 +1,10 @@
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-
 # Projeto 2 Módulo 2 - DevinHouse
 
 Desenvolvido pela SQUAD 1 - Turma DevInHouse.
 
 ## 🚀 Descrição
-
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em sua máquina local para fins de desenvolvimento e testes.
 
@@ -14,18 +12,15 @@ O objetivo deste documento é facilitar a compreensão do escopo do projeto e de
 
 Consulte **Implantação** para saber mais informações sobre implantar o projeto.
 
-
 ## Comandos para Instalar dependências:
 - [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
 
 ## Requisitos Funcionais:
 - [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
 
-
 ### 📋 Requisitos Funcionais
 
 Aplicativos e ferramentas que devem estar instalados e executando:
-
 
 ## Exemplo a ser seguido:
 
@@ -168,7 +163,7 @@ Todos aqueles que ajudaram a levantar o projeto desde o seu início.
 
 * **Wagner Pedroso** - *Product Owner* - [Desenvolvedor] (https://github.com/wagnerpedroso)
 
-* **Thiago Peres** - *Architecture/Developer* - [Desenvolvedor] (https://github.com/tpdevinhouse)
+* **Thiago Teodoro Peres** - *Architecture/Developer* - [Desenvolvedor] (https://github.com/tpdevinhouse)
 
 * **Leonardo Rodrigues Magalhães** - *Developer/Quality Assurance* - [Desenvolvedor] (https://github.com/scorplion159)
 
@@ -178,14 +173,13 @@ Todos aqueles que ajudaram a levantar o projeto desde o seu início.
 
 * **Douglas Klafke Scheibler** - *Developer* - [Desenvolvedor] (https://github.com/DouglasKlafkeScheibler)
 
-* **Murillo Silva** - *Developer* - [Desenvolvedor] (https://github.com/Rumil0)
+* **Murillo Henryque de Paula Silva** - *Developer* - [Desenvolvedor] (https://github.com/Rumil0)
 
-* **Valeria Parra** - *Developer* - [Desenvolvedor] (https://github.com/ValeriaGuevara1901)
+* **Valeria Alexandra Guevara Parra** - *Developer* - [Desenvolvedor] (https://github.com/ValeriaGuevara1901)
 
-* **Monique Zanquet** - *Developer* - [Desenvolvedor] (https://github.com/mzanquet)
+* **Monique Aparecida Zanquet** - *Developer* - [Desenvolvedor] (https://github.com/mzanquet)
 
 * **Bruno Santana** - *Developer* - [Desenvolvedor] (https://github.com/ibrunoss) (Desistente)
-
 
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="squad.jpg" /></a></p>
 
@@ -193,5 +187,9 @@ Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/f
 
 ## 🎁 Expressões de Gratidão
 
+<<<<<<< HEAD
+Obrigado a todos que participaram e ajudaram esse projeto á ser desenvolvido.
+>>>>>>> main
+=======
 Obrigado a todos que participaram e ajudaram esse projeto á ser desenvolvido.
 >>>>>>> main
