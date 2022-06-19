@@ -23,7 +23,7 @@ https://www.figma.com/file/e1bWIIr30OjndaBWNiir4Y/Dev-agro?node-id=0%3A1.
 Em seu servidor local baixe o projeto usando o comando:
 
 git clone https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01.git
- 
+
 ### 🔧 Instalação Detalhada
 
 Um exemplo passo-a-passo para informar o que você deve executar para montar o ambiente de desenvolvimento e a aplicação completa.
@@ -36,11 +36,21 @@ git clone https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01.git
 
 Aguarde o download terminar. 
 
-Para instalar o Projeto, execute o comando:
+Você abrirá o terminal Gitbash dentro do Visual Studio Code, para instalar o servidor de autenticação.
 
-npm i > ou npm install = instala o projeto
+Navegue até a pasta Auth-server com o comando:
 
-Aguarde terminar á instalação o projeto. 
+cd auth-server 
+
+Para instalar o servidor, use com comando:
+
+npm i > ou npm install = instalar o servidor de autenticação.
+
+Aguarde terminar a instalação do servidor de autenticação, use o comando: 
+
+npm start = Para iniciar o servidor de autenticação.
+
+Abra um novo terminal Gitbash dentro do Visual Studio Code, para instalar e iniciar a aplicação.
 
 Usando o comando: 
 
@@ -48,33 +58,23 @@ cd devagro-frontend/
 
 Para entrar na pasta devagro-frontend, posteriormente digite o comando:
 
+npm i > ou npm install = instala o projeto
+
+Aguarde terminar a instalação o projeto e inicie a aplicação com o comando: 
+
 ng s ou ng serve = inicia o projeto já instalado com Angular.
 
-Abra seu navegado e abra no link descrito no terminal da aplicação, geralmente:
+Abra seu navegado no link descrito no terminal da aplicação, geralmente:
 
 http://localhost:4200/
 
-Vá em criar uma conta e preencha seus dados.
+Efetue seu login com usuário e senha cadastrado no servidor de autenticação.
 
-Efetue seu login.
+Login: adm@devagro.com.br
 
-Bem-vindo ao pagina home do sistema. 
+Senha: dev123
 
-## ⚙️ Executando os testes
-
-Abra seu navegado e abra no link descrito na aplicação, geralmente:
-
-http://localhost:4200/
-
-Vá em criar uma conta e preencha seus dados.
-
-Efetue seu login.
-
-Insira primeiramente uma fazenda, depois pode criar funcionarios e graos.
-
-Após realizar os cadastros desejado, confira nas respectivas páginas se armazenamento e funcionamento.
-
-Bom uso do sistema!
+Bem-vindo ao pagina home do sistema.
 
 ## 📦 Desenvolvimento
 
@@ -122,7 +122,15 @@ Apresentação de resultados, junção dos projetos, definindo apresentação.
 
 11º dia - 17/06/22 - 19:30.
 
-Termino do desenvolvimento do projeto, dividindo apresentação.
+Finalizando o desenvolvimento do projeto, dividindo apresentação.
+
+12º dia - 18/06/22 - 19:30.
+
+Apresentação de resultados, apresentação do projeto.
+
+13º dia - 19/06/22 - 14:30.
+
+Ultimas modificações, entraga final do projeto.
 
 ## 🛠️ Tecnologias utilizadas
 
@@ -135,8 +143,6 @@ Termino do desenvolvimento do projeto, dividindo apresentação.
 - LocalStorage - Armazenamento dos dados. 
 
 * [AppComponent](https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css) - bootstrap - Framework web utilizado / Confirmar.
-
-* [Maven](https://maven.apache.org/) - Gerente de Dependência.
  
 ## 🖇️ Colaborando
 
@@ -172,7 +178,7 @@ Todos aqueles que ajudaram a levantar o projeto desde o seu início.
 
 <p align="center"><a href="#"><img align="center" width="218" height="375"  src="squad.jpg" /></a></p>
 
-Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/franciscosantana4/733h4p7nyk1lmbpn) que participaram deste projeto e da turma com mais detalhes.
+Você também pode ver a lista de todos os [Colaboradores] (https://padlet.com/franciscosantana4/733h4p7nyk1lmbpn) que participaram deste projeto e da turma DevInHouse com mais detalhes.
 
 ## 🎁 Expressões de Gratidão
 
