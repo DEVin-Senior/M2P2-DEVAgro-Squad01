@@ -37,7 +37,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
 
   }
 
- 
+
   nome:string=""
   id:number = 0
   fazenda:string= ""
@@ -45,8 +45,8 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
   telefone:string= ""
   funcaoPrincipal:string= ""
   ativo:boolean=true
-  
- 
+
+
   ngOnInit(): void {
     this.constroiLsitaObjeto()
     console.log(this.listLocalStorage)
@@ -59,15 +59,15 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
   valorNome = document.querySelector("#input-nome") as HTMLInputElement
   valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
   valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
-  
 
-  alteraInfo(){ 
+
+  alteraInfo(){
     console.log("xxxxx")
     let valorNome = document.querySelector("#input-nome") as HTMLInputElement
     let valorFazenda = document.querySelector("#input-fazenda") as HTMLInputElement
     let valorFuncao = document.querySelector("#input-funcaoPrincipal") as HTMLInputElement
-    
-    
+
+
     this.funcionarioInfo.nome =valorNome.value
     this.funcionarioInfo.fazenda=valorFazenda.value
     this.funcionarioInfo.funcaoPrincipal=valorFuncao.value
@@ -76,8 +76,8 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     console.log(this.funcionarioInfo.funcaoPrincipal)
 
 
-    
-    
+
+
 
     this.encontraFuncionairo(this.funcionarioInfo.nome,this.listaLocalStorageObject,this.funcionarioInfo.fazenda,this.funcionarioInfo.funcaoPrincipal)
     this.encontraEDeleta(this.funcionarioInfo.nome,this.listaLocalStorageObject)
@@ -93,16 +93,16 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
         if(element[1]==nome){
           console.log(elemental)
           Object.entries(elemental).forEach(element => {
-            
+
             if(element[0]=="CPF"){
               console.log(element[1])
               this.CPF=element[1]
               console.log(this.CPF)
             }
             if(element[0]=="ativo"){
-              
-              
-              
+
+
+
               console.log(element[1])
               this.ativo=this.setaAtividade()
               console.log(this.ativo)
@@ -132,23 +132,23 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
               this.fazenda=this.funcionarioInfo.fazenda
               console.log(this.fazenda)
             }
-            
-            
+
+
          });}
 
-         
-         
-         
-         
-            
-            
-  
+
+
+
+
+
+
+
       }
-       
-      
+
+
       )
       console.log(Object.entries(elemental))
-      
+
     });
 
   }
@@ -162,8 +162,8 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
          if(element[1]==nome){
            list.splice(this.id,1)
            console.log(list)
-           
-             
+
+
           }})});
         }
 
@@ -180,7 +180,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
     list.splice(this.funcionario_atualizado.id,0,this.funcionario_atualizado)
     console.log(this.funcionario_atualizado)
     console.log(list);
-    
+
 
     }
 
@@ -188,7 +188,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
        list.forEach(element => {
         var elementString = JSON.stringify(element)
         this.listaString.push(elementString)
-        
+
        });
       console.log(this.listaString)
     }
@@ -196,7 +196,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
       localStorage.setItem('listaFuncionarios',JSON.stringify(this.listaString))
     }
 
-  
+
   constroiLsitaObjeto(){
     this.listLocalStorage.forEach(element => {
       console.log(JSON.parse(String(element)))
@@ -204,7 +204,7 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
       console.log(this.listaLocalStorageObject)
        console.log(element)
        //console.log(element.isPrototypeOf)
-       
+
      });
   }
 
@@ -212,19 +212,19 @@ export class FuncionarioAlteraCadastroComponent implements OnInit {
   setaAtividade(){
     var check = document.querySelector('#check') as HTMLInputElement
     var checkNo= document.querySelector('#check-no') as HTMLInputElement
-    
+
     if(checkNo.checked==true){
       this.ativo=false;
       return false
     }if(check.checked==true){return true}else{
       return false
     }
-   
-    
-   
+
+
+
 
 }
 
-  
+
 
 }

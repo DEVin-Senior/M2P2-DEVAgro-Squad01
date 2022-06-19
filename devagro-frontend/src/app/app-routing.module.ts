@@ -1,3 +1,4 @@
+import { AuthGuard } from './core/guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FazendaCadastroComponent } from './components/admin/pages/fazendas/fazenda-cadastro/fazenda-cadastro.component';
@@ -17,41 +18,49 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./components/admin/admin.module').then((m) => m.AdminModule),
   },
   {
-    path: "admin/fazendas",
-    component: FazendasComponent
+    path: 'admin/fazendas',
+    component: FazendasComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "admin/fazendas/cadastro",
-    component: FazendaCadastroComponent
+    path: 'admin/fazendas/cadastro',
+    component: FazendaCadastroComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "admin/funcionarios",
-    component: FuncionariosComponent
+    path: 'admin/funcionarios',
+    component: FuncionariosComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path:"admin/funcionarios/cadastro",
-    component:FuncionarioCadastroComponent
+    path: 'admin/funcionarios/cadastro',
+    component: FuncionarioCadastroComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path:"admin/funcionarios/cadastro/alterar",
-    component:FuncionarioAlteraCadastroComponent
+    path: 'admin/funcionarios/cadastro/alterar',
+    component: FuncionarioAlteraCadastroComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "admin/graos",
-    component: GraosComponent
+    path: 'admin/graos',
+    component: GraosComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "admin/grao-cadastro",
-    component: GraoCadastroComponent
+    path: 'admin/grao-cadastro',
+    component: GraoCadastroComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path: "admin/empresa-cadastro",
-    component: EmpresaCadastroComponent
-  }
+    path: 'admin/empresa-cadastro',
+    component: EmpresaCadastroComponent,
+  },
 ];
 
 @NgModule({
