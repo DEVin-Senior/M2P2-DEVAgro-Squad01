@@ -9,7 +9,11 @@
   <ul class="sidenav-nav">
     <li class="sidenav-nav-item" *ngFor="let data of navData">
       <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]">
-        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <!-- <i class="sidenav-link-icon" [class]="data.icon"></i> -->
+        <img class="sidenav-link-icon" [src]="pathHome" *ngIf="data.pathImgHome == true" >
+        <img class="sidenav-link-icon" [src]="pathMilho" *ngIf="data.pathImgMilho == true" >
+        <img class="sidenav-link-icon" [src]="pathFunc" *ngIf="data.pathImgFunc == true" >
+        <img class="sidenav-link-icon" [src]="pathArmazem" *ngIf="data.pathImgArmazem == true" >
         <span class="sidenav-link-text" *ngIf="collapsed">{{
           data.label
         }}</span>
