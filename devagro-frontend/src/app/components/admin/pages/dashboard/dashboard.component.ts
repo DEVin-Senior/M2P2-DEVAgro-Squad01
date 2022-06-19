@@ -30,6 +30,7 @@ export class DashboardComponent {
   );
 
   qtdeFuncionarios = localStorage.getItem('quantidade_funcionarios');
+  qtdeFazendas = localStorage.getItem('quantidade_fazendas');
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 }

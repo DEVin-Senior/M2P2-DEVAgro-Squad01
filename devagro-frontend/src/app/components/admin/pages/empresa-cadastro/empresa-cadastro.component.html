@@ -1,46 +1,103 @@
 <body>
-    <div class="child">
-        <div class="parent">
-            <div class="quadro">
-                <div class="centralizar_logo">
-                    <img src="./assets/logo-devinhouse.png" alt="Logo Dev In House" />
-                </div>
-                    <h1> Dev-Agro </h1>
-                    <h2> Cadastro de Empresa </h2>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-
-                    <h5> Nome Empresarial </h5>
-                        <input type="text" placeholder="Nome empresarial" class="entrada_texto" required minlength="2" #NOME_EMPRESARIAL (keyup)=salvar_nome_empresarial(NOME_EMPRESARIAL.value)>
-                    <p></p>
-
-                    <h5> CNPJ </h5>
-                        <input type="text" placeholder="CNPJ da empresa"  class="entrada_texto" required  minlength="2" maxlength="14" #SALVAR_CNPJ (keyup)=salvar_CNPJ(SALVAR_CNPJ.value)>
-                    <p></p>
-
-                    <h5> Endereço da Sede </h5>
-                        <input type="text" placeholder="Endereço" class="entrada_texto" required  minlength="6" #SALVAR_ENDERECO_DA_EMPRESA (keyup)=salvar_endereco_da_empresa(SALVAR_ENDERECO_DA_EMPRESA.value)>
-                    <p></p>
-
-                    <h5> E-mail da empresa </h5>
-                        <input type="text" placeholder="E-mail da empresa" class="entrada_texto" required minlength="2" #SALVAR_EMAIL_DA_EMPRESA (keyup)=salvar_email_da_empresa(SALVAR_EMAIL_DA_EMPRESA.value)>
-                    <p></p>
-
-                    <h5> Telefone </h5>
-                        <input type="text" placeholder="Telefone da empresa para contato" class="entrada_texto" required  minlength="8" maxlength="11" #SALVAR_TELEFONE_DA_EMPRESA (keyup)=salvar_telefone_da_empresa(SALVAR_TELEFONE_DA_EMPRESA.value)>
-                    <p></p>
-
-                    <h5> Senha </h5>
-                        <input type="text" placeholder="Senha de acesso" class="entrada_texto" required  minlength="2" maxlength="10" #SALVAR_SENHA_DA_EMPRESA (keyup)=salvar_senha_da_empresa(SALVAR_SENHA_DA_EMPRESA.value)>
-                    <p></p>
-
-                    <h5> Digite novamente a senha </h5>
-                        <input type="text" placeholder="Senha " class="entrada_texto" required  minlength="2" maxlength="10" #SALVAR_SENHA_DA_EMPRESA_NOVAMENTE (keyup)=salvar_senha_da_empresa_novamente(SALVAR_SENHA_DA_EMPRESA_NOVAMENTE.value)>
-                    <p></p>
-                        
-                    <button class="centralizarbutton" (click)=click_log_in()>Log In </button>
-            </div>
+  <div class="child">
+    <div class="parent">
+      <div class="quadro">
+        <div class="centralizar_logo">
+          <img src="./assets/logo-devinhouse.png" alt="Logo Dev In House" />
         </div>
+        <h1>Dev-Agro</h1>
+        <h2>Cadastro de Empresa</h2>
+
+        <h5>Nome Empresarial</h5>
+        <input
+          type="text"
+          placeholder="Nome empresarial"
+          class="entrada_texto"
+          required
+          minlength="2"
+          #NOME_EMPRESARIAL
+          (keyup)="salvar_nome_empresarial(NOME_EMPRESARIAL.value)"
+        />
+
+        <h5>CNPJ</h5>
+        <input
+          type="text"
+          placeholder="CNPJ da empresa"
+          class="entrada_texto"
+          required
+          minlength="2"
+          maxlength="14"
+          #SALVAR_CNPJ
+          (keyup)="salvar_CNPJ(SALVAR_CNPJ.value)"
+        />
+
+        <h5>Endereço da Sede</h5>
+        <input
+          type="text"
+          placeholder="Endereço"
+          class="entrada_texto"
+          required
+          minlength="6"
+          #SALVAR_ENDERECO_DA_EMPRESA
+          (keyup)="salvar_endereco_da_empresa(SALVAR_ENDERECO_DA_EMPRESA.value)"
+        />
+
+        <h5>E-mail da empresa</h5>
+        <input
+          type="text"
+          placeholder="E-mail da empresa"
+          class="entrada_texto"
+          required
+          minlength="2"
+          #SALVAR_EMAIL_DA_EMPRESA
+          (keyup)="salvar_email_da_empresa(SALVAR_EMAIL_DA_EMPRESA.value)"
+        />
+
+        <h5>Telefone</h5>
+        <input
+          type="text"
+          placeholder="Telefone da empresa para contato"
+          class="entrada_texto"
+          required
+          minlength="8"
+          maxlength="11"
+          #SALVAR_TELEFONE_DA_EMPRESA
+          (keyup)="salvar_telefone_da_empresa(SALVAR_TELEFONE_DA_EMPRESA.value)"
+        />
+
+        <h5>Senha</h5>
+        <input
+          type="text"
+          placeholder="Senha de acesso"
+          class="entrada_texto"
+          required
+          minlength="2"
+          maxlength="10"
+          #SALVAR_SENHA_DA_EMPRESA
+          (keyup)="salvar_senha_da_empresa(SALVAR_SENHA_DA_EMPRESA.value)"
+        />
+
+        <h5>Digite novamente a senha</h5>
+        <input
+          type="text"
+          placeholder="Senha "
+          class="entrada_texto"
+          required
+          minlength="2"
+          maxlength="10"
+          #SALVAR_SENHA_DA_EMPRESA_NOVAMENTE
+          (keyup)="
+            salvar_senha_da_empresa_novamente(
+              SALVAR_SENHA_DA_EMPRESA_NOVAMENTE.value
+            )
+          "
+        />
+        <p></p>
+
+        <button class="centralizarbutton" (click)="click_log_in()">
+          Log In
+        </button>
+      </div>
     </div>
+  </div>
 </body>
