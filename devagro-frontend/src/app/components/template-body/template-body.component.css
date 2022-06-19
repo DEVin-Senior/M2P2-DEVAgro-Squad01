@@ -68,7 +68,7 @@
 
 .body {
   width: calc(100% - 5rem);
-  height: 150vh;
+  height: 100vh;
   margin-left: 5rem;
   z-index: 0;
   position: relative;
