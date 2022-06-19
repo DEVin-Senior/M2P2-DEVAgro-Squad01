@@ -10,14 +10,6 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em sua m�
 
 O objetivo deste documento é facilitar a compreensão do escopo do projeto e de como funciona.
 
-Consulte **Implantação** para saber mais informações sobre implantar o projeto.
-
-## Comandos para Instalar dependências:
-- [Comandos](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/comandos_instalacoes_dependencias.md)
-
-## Requisitos Funcionais:
-- [Checklist / Roadmap dos Requisistos Funcionais do sistema](https://github.com/DEVin-Senior/M2P2-DEVAgro-Squad01/blob/main/requisitos.md)
-
 ### 📋 Requisitos Funcionais
 
 Aplicativos e ferramentas que devem estar instalados e executando:
