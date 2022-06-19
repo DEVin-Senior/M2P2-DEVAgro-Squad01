@@ -1,3 +1,8 @@
+img {
+  display: flex;
+  max-width: 40px;
+}
+
 .sidenav {
   background: var(--main-green-color);
   transition: all .5s ease;
