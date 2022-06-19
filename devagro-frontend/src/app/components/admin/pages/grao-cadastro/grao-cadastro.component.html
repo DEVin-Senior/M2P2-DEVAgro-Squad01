@@ -5,15 +5,15 @@
     <div class="borda">
       <br>  
       <h2 class="formulario">NOME</h2>
-      <input type="text" placeholder="  Nome" class="input" #NOME (keyup)=mudar_nome(NOME.value)>>
+      <input type="text" placeholder="  Nome" class="input" required minlength="2" #NOME (keyup)=mudar_nome(NOME.value)>>
   
       <br><br>
       <h2 class="formulario">Fazenda que Produz</h2>
-      <input type="text" placeholder="  seleciona a fazenda" class="input" #FAZENDA (keyup)=mudar_fazenda(FAZENDA.value)>>
+      <input type="text" placeholder="  seleciona a fazenda" class="input" required #FAZENDA (keyup)=mudar_fazenda(FAZENDA.value)>>
   
       <br><br>
       <h2 class="formulario">Previsão de Colheita</h2>
-      <input type="date" placeholder="Data dd/mm/aaaa" class="input" #colheita (keyup)=mudar_colheita(colheita.value)>> 
+      <input type="date" placeholder="Data dd/mm/aaaa" class="input" required #colheita (keyup)=mudar_colheita(colheita.value)>> 
   
      <br><br>
       <h2 class="formulario">Informações adicionais</h2>
