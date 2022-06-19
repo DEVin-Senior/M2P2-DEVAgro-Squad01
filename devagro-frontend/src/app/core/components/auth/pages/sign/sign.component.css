@@ -7,11 +7,23 @@
   font-weight: 600;
 }
 
+.btn {
+  width: 100%;
+  height: 80px;
+  margin: 25px 0 0;
+  border-radius: 15px;
+  background: var(--main-green-color);
+  color: var(--white);
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .container-login p {
-  margin-top: -35px;
-  margin-bottom: 30px;
+  margin-top: -80px;
+  margin-bottom: 35px;
   color: var(--grey);
   font-weight: 400;
+  font-size: 16px;
 }
 
 .sign-helper {
@@ -27,7 +39,8 @@
 }
 
 .sign-error-credential {
-  color: red;
+  padding-top: 20px;
+  color: var(--red);
 }
 
 .sign-input-value {

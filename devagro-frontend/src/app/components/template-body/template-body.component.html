@@ -3,9 +3,9 @@
     <p class="info-title">{{title}}</p>
     <div class="info-user-sign">
       <ul class="menu-user">
-        <li>| Usuário Administrativo
+        <li>| {{user}}
             <ul>
-                <li><span><i class="fa fa-window-close" aria-hidden="true"></i></span> Sair</li>
+                <li (click)="logout()"><span><i class="fa fa-window-close" aria-hidden="true"></i></span> Sair</li>
             </ul>
         </li>
     </ul>

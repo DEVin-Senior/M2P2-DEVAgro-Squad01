@@ -10,7 +10,7 @@ app.use(cors());
 
 app.post("/sign", (req, res) => {
   const email = "adm@devagro.com.br";
-  const password = "dev123agro@";
+  const password = "dev123";
 
   if (req.body.email === email && req.body.password === password) {
     const data = {

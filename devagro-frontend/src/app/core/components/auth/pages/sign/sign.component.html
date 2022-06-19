@@ -3,12 +3,13 @@
     <img src="./assets/logo-devinhouse.png" alt="Logo Dev In House" />
     <h3>Dev-Agro</h3>
     <p>Entre com seu login e senha</p>
-    <form>
+    <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
       <div>
         <span>E-MAIL</span>
         <label>
           <input
             type="email"
+            formControlName="email"
             class="sign-input-value"
             placeholder="E-mail"
             required
@@ -23,6 +24,7 @@
         <label>
           <input
             type="password"
+            formControlName="password"
             class="sign-input-value"
             placeholder="Senha"
             required
@@ -43,14 +45,15 @@
           </i>
         </label>
       </div>
+      <button class="btn" [disabled]="formAuth.invalid">Log In</button>
     </form>
-    <button class="btn-auth">Log In</button>
 
-    <span class="sign-error-credential">Usuário ou senha incorreta!</span>
+
+    <span class="sign-error-credential" *ngIf="msgError">{{msgError}}</span>
 
     <div class="sign-new-account">
       <span>Sua empresa não possui conta?</span>
-      <a href="#">Crie agora!</a>
+      <a routerLink="/admin/empresa-cadastro">Crie agora!</a>
     </div>
   </div>
 </section>

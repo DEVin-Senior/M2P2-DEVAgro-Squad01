@@ -5,14 +5,14 @@ body {
 .parent {
      position: relative;
     }
-      
+
 .child {
     width: 1000px;
-      
+
     position: absolute;
     top: 12%;
     left: 30%;
-      
+
     margin: -70px 0 0 -70px;
     }
 
