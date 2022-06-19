@@ -26,6 +26,7 @@ import { FuncionarioCadastroComponent } from './pages/funcionarios/funcionario-c
 import { FuncionarioAlteraCadastroComponent } from './pages/funcionarios/funcionario-altera-cadastro/funcionario-altera-cadastro.component';
 import { PropriedadesCadastradasComponent } from './pages/fazendas/propriedades-cadastradas/propriedades-cadastradas.component';
 import { ChartsComponent } from './pages/dashboard/charts/charts.component';
+import { EmpresaCadastroComponent } from './pages/empresa-cadastro/empresa-cadastro.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ChartsComponent } from './pages/dashboard/charts/charts.component';
     FuncionarioAlteraCadastroComponent,
     GraoCadastroComponent,
     PropriedadesCadastradasComponent,
-    ChartsComponent
+    ChartsComponent,
+    EmpresaCadastroComponent
 
   ],
   imports: [
