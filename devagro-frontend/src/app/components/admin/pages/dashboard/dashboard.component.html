@@ -3,12 +3,14 @@
     <div class="container">
       <h4><b>Total de propriedades instaladas</b></h4>
       <p class="valor">{{qtdeFazendas}}</p>
+      <p class="valor" *ngIf="qtdeFazendas == null">0</p>
     </div>
   </div>
   <div class="cards-1">
     <div class="container">
       <h4><b>Total de funcionários</b></h4>
       <p class="valor">{{qtdeFuncionarios}}</p>
+      <p class="valor" *ngIf="qtdeFuncionarios == null">0</p>
     </div>
   </div>
 </section>
