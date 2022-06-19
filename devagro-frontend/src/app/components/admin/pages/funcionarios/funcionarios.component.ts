@@ -6,6 +6,10 @@ import { Component, Input, OnInit, TRANSLATIONS } from '@angular/core';
   styleUrls: ['./funcionarios.component.css'],
 })
 export class FuncionariosComponent implements OnInit {
+
+  qtdeFazendas = Number(localStorage.getItem('quantidade_fazendas'));
+  aprovaCadastro: boolean = this.qtdeFazendas > 0 ? true : false
+
   @Input() public titulo: string = 'Funcionários';
 
   nome: string = '';
@@ -70,11 +74,11 @@ export class FuncionariosComponent implements OnInit {
           console.log(this.listNome)
           return element[1].toString
         }
-        
+
       })
-  
+
       console.log(Object.entries(elemental))
-      
+
     });
     }
     pegaFazenda(){
@@ -88,11 +92,11 @@ export class FuncionariosComponent implements OnInit {
             console.log(this.listFazenda)
             return element[1].toString
           }
-          
+
         })
-    
+
         console.log(Object.entries(elemental))
-        
+
       });
 
     }
@@ -108,20 +112,20 @@ export class FuncionariosComponent implements OnInit {
             console.log(this.listFuncao)
             return element[1].toString
           }
-          
+
         })
-    
+
         console.log(Object.entries(elemental))
-        
+
       });
 
     }
 
-  
 
- 
- 
- 
+
+
+
+
   pegaTelefone(){}
   pegaFUncaoPrincipal(){}
   pegaAtividade(){
@@ -130,7 +134,7 @@ export class FuncionariosComponent implements OnInit {
         if(element[0]=="ativo"){
           console.log(element[1])
           this.ativo=element[1]
-          
+
           if(this.ativo==""){this.ativo="não"}else{
             this.ativo="sim"
           }
@@ -139,28 +143,28 @@ export class FuncionariosComponent implements OnInit {
           console.log(this.listAtivo)
           return element[1].toString
         }
-        
+
       })
-  
+
       console.log(Object.entries(elemental))
-      
+
     });
   }
 
-  
+
 
 
   addFuncionarios(){
 
-    
-      
-      
-    
+
+
+
+
    // product.preventDefault();
 
    //CRIA UM ELEMENTO TR E ATRIBUI UMA CLASSE A ELE
     const tr = document.createElement('tr')
-    tr.classList.add('tr'); 
+    tr.classList.add('tr');
 
     ///BUSCA O ELEMENTO TABLE VIA DOM
     //DEFINE O ELEMENTO TR CRAIDO ANTERIORMENTE COMO ELEMENTO FILHO DE TABLE
@@ -172,7 +176,7 @@ export class FuncionariosComponent implements OnInit {
     td2.classList.add('td2');
     const td1 = document.createElement("td")
     td1.classList.add('td1');
-    
+
     const td3 = document.createElement("td")
     td3.classList.add('td3');
     const td4 = document.createElement("td")
@@ -208,21 +212,21 @@ export class FuncionariosComponent implements OnInit {
          p1.classList.add("id:")
          console.log(p1.className)
          //p1.className=this.nome
-         
+
 
          divParagrafo.appendChild(p2)
-         
-         
-         
+
+
+
         // p2.innerText="xxxxxxxxx"
-    
-        
+
+
 
 
     //MANIPULA ELEMENTOS DENTRO DE "TD2"
 
 
-    
+
   }
 
 
@@ -233,9 +237,9 @@ export class FuncionariosComponent implements OnInit {
       console.log(this.localStorageViewObject)
        console.log(element)
        console.log(element.isPrototypeOf)
-       
+
      });
   }
 
-  
+
 }
